@@ -11,13 +11,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/arrange_condiments--v047-arrange_full.mp4",
-          "poster": "./media/arrange_condiments--v047-arrange_full.jpg",
-          "run_id": "v047/arrange_full",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 139.05,
-          "sampling": "original_video"
+          "url": "./media/arrange_condiments--demo--1p5x.mp4",
+          "poster": "./media/arrange_condiments--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 29.4,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -47,13 +48,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/carry_dutch_oven--v060-pot_full.mp4",
-          "poster": "./media/carry_dutch_oven--v060-pot_full.jpg",
-          "run_id": "v060/pot_full",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 73.0,
-          "sampling": "original_video"
+          "url": "./media/carry_dutch_oven--demo--1p5x.mp4",
+          "poster": "./media/carry_dutch_oven--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 16.555556,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -66,13 +68,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/coffee_handle_turn--v029-coffee_full.mp4",
+          "url": "./media/coffee_handle_turn--v029-coffee_full--1p5x.mp4",
           "poster": "./media/coffee_handle_turn--v029-coffee_full.jpg",
           "run_id": "v029/coffee_full",
           "kind": "accepted",
           "label": "验收参考 · 完整总览",
-          "duration_s": 66.483333,
-          "sampling": "original_video"
+          "duration_s": 44.322222,
+          "sampling": "original_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -85,13 +88,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/cup_hang--cup_supported_setdown_generic_full_001.mp4",
-          "poster": "./media/cup_hang--cup_supported_setdown_generic_full_001.jpg",
-          "run_id": "cup_supported_setdown_generic_full_001",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 64.866667,
-          "sampling": "original_video"
+          "url": "./media/cup_hang--demo--1p5x.mp4",
+          "poster": "./media/cup_hang--demo--1p5x.jpg",
+          "run_id": "cup_human_20261119_v14",
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 22.277778,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -104,13 +108,14 @@
       "trajectory_count": 0,
       "videos": [
         {
-          "url": "./media/fold_glasses--fold_glasses_motion_200.mp4",
+          "url": "./media/fold_glasses--fold_glasses_motion_200--1p5x.mp4",
           "poster": "./media/fold_glasses--fold_glasses_motion_200.jpg",
           "run_id": "fold_glasses_motion_200",
           "kind": "development",
           "label": "开发试跑 · 抽帧回放（失败）",
-          "duration_s": 46.733333,
-          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz"
+          "duration_s": 31.155556,
+          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -123,13 +128,14 @@
       "trajectory_count": 0,
       "videos": [
         {
-          "url": "./media/fold_phone--fold_phone_motion_201.mp4",
+          "url": "./media/fold_phone--fold_phone_motion_201--1p5x.mp4",
           "poster": "./media/fold_phone--fold_phone_motion_201.jpg",
           "run_id": "fold_phone_motion_201",
           "kind": "development",
           "label": "开发试跑 · 抽帧回放（失败）",
-          "duration_s": 15.266667,
-          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz"
+          "duration_s": 10.177778,
+          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -142,13 +148,14 @@
       "trajectory_count": 0,
       "videos": [
         {
-          "url": "./media/folder_store_pen--review005_folder_store_pen.mp4",
+          "url": "./media/folder_store_pen--review005_folder_store_pen--1p5x.mp4",
           "poster": "./media/folder_store_pen--review005_folder_store_pen.jpg",
           "run_id": "review005_folder_store_pen",
           "kind": "diagnostic",
           "label": "物理诊断 · 抽帧回放",
-          "duration_s": 60.066667,
-          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz"
+          "duration_s": 40.044444,
+          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -161,13 +168,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/hammer--hammer_generic_full_001.mp4",
+          "url": "./media/hammer--hammer_generic_full_001--1p5x.mp4",
           "poster": "./media/hammer--hammer_generic_full_001.jpg",
           "run_id": "hammer_generic_full_001",
           "kind": "accepted",
           "label": "验收参考 · 完整总览",
-          "duration_s": 23.383333,
-          "sampling": "original_video"
+          "duration_s": 15.588889,
+          "sampling": "original_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -180,13 +188,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/insert_peg--peg_generic_full_001.mp4",
+          "url": "./media/insert_peg--peg_generic_full_001--1p5x.mp4",
           "poster": "./media/insert_peg--peg_generic_full_001.jpg",
           "run_id": "peg_generic_full_001",
           "kind": "accepted",
           "label": "验收参考 · 完整总览",
-          "duration_s": 50.55,
-          "sampling": "original_video"
+          "duration_s": 33.7,
+          "sampling": "original_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -199,13 +208,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/insert_pen--pen_full_001.mp4",
-          "poster": "./media/insert_pen--pen_full_001.jpg",
-          "run_id": "pen_full_001",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 27.116667,
-          "sampling": "original_video"
+          "url": "./media/insert_pen--demo--1p5x.mp4",
+          "poster": "./media/insert_pen--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 17.6,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -218,13 +228,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/insert_pipette--pipette_generic_full_001.mp4",
-          "poster": "./media/insert_pipette--pipette_generic_full_001.jpg",
-          "run_id": "pipette_generic_full_001",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 42.516667,
-          "sampling": "original_video"
+          "url": "./media/insert_pipette--demo--1p5x.mp4",
+          "poster": "./media/insert_pipette--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 27.755556,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -237,13 +248,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/kettle_pour--kettle_fast_full_002.mp4",
-          "poster": "./media/kettle_pour--kettle_fast_full_002.jpg",
-          "run_id": "kettle_fast_full_002",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 28.6,
-          "sampling": "original_video"
+          "url": "./media/kettle_pour--demo--1p5x.mp4",
+          "poster": "./media/kettle_pour--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 19.066667,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -256,13 +268,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/kitchen--kitchen_original_generic_full_001.mp4",
+          "url": "./media/kitchen--kitchen_original_generic_full_001--1p5x.mp4",
           "poster": "./media/kitchen--kitchen_original_generic_full_001.jpg",
           "run_id": "kitchen_original_generic_full_001",
           "kind": "accepted",
           "label": "验收参考 · 完整总览",
-          "duration_s": 90.4,
-          "sampling": "original_video"
+          "duration_s": 60.266667,
+          "sampling": "original_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -275,13 +288,14 @@
       "trajectory_count": 0,
       "videos": [
         {
-          "url": "./media/lift_basket--review005_lift_basket.mp4",
+          "url": "./media/lift_basket--review005_lift_basket--1p5x.mp4",
           "poster": "./media/lift_basket--review005_lift_basket.jpg",
           "run_id": "review005_lift_basket",
           "kind": "diagnostic",
           "label": "物理诊断 · 抽帧回放",
-          "duration_s": 21.066667,
-          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz"
+          "duration_s": 14.044444,
+          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -294,13 +308,14 @@
       "trajectory_count": 0,
       "videos": [
         {
-          "url": "./media/lift_bucket--review005_lift_bucket.mp4",
+          "url": "./media/lift_bucket--review005_lift_bucket--1p5x.mp4",
           "poster": "./media/lift_bucket--review005_lift_bucket.jpg",
           "run_id": "review005_lift_bucket",
           "kind": "diagnostic",
           "label": "物理诊断 · 抽帧回放",
-          "duration_s": 28.066667,
-          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz"
+          "duration_s": 18.711111,
+          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -313,13 +328,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/lift_carton--carton_full_001.mp4",
-          "poster": "./media/lift_carton--carton_full_001.jpg",
-          "run_id": "carton_full_001",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 17.1,
-          "sampling": "original_video"
+          "url": "./media/lift_carton--demo--1p5x.mp4",
+          "poster": "./media/lift_carton--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 10.044444,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -332,13 +348,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/lift_kettle_lid--lid_multimodal_full_001.mp4",
-          "poster": "./media/lift_kettle_lid--lid_multimodal_full_001.jpg",
-          "run_id": "lid_multimodal_full_001",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 21.4,
-          "sampling": "original_video"
+          "url": "./media/lift_kettle_lid--demo--1p5x.mp4",
+          "poster": "./media/lift_kettle_lid--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 14.25,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -351,13 +368,14 @@
       "trajectory_count": 0,
       "videos": [
         {
-          "url": "./media/lift_pot_lid--lid_sensor_episode_001.mp4",
+          "url": "./media/lift_pot_lid--lid_sensor_episode_001--1p5x.mp4",
           "poster": "./media/lift_pot_lid--lid_sensor_episode_001.jpg",
           "run_id": "lid_sensor_episode_001",
           "kind": "diagnostic",
           "label": "物理通过 · 触觉待验收",
-          "duration_s": 22.916667,
-          "sampling": "original_video"
+          "duration_s": 15.277778,
+          "sampling": "original_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -387,13 +405,14 @@
       "trajectory_count": 0,
       "videos": [
         {
-          "url": "./media/open_laptop--review005_open_laptop.mp4",
+          "url": "./media/open_laptop--review005_open_laptop--1p5x.mp4",
           "poster": "./media/open_laptop--review005_open_laptop.jpg",
           "run_id": "review005_open_laptop",
           "kind": "diagnostic",
           "label": "物理诊断 · 抽帧回放",
-          "duration_s": 17.066667,
-          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz"
+          "duration_s": 11.377778,
+          "sampling": "sparse_actual_frames_held_at_native_timestamps_60hz",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -406,13 +425,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/open_stapler--stapler_multimodal_full_003.mp4",
-          "poster": "./media/open_stapler--stapler_multimodal_full_003.jpg",
-          "run_id": "stapler_multimodal_full_003",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 23.2,
-          "sampling": "original_video"
+          "url": "./media/open_stapler--demo--1p5x.mp4",
+          "poster": "./media/open_stapler--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 15.466667,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -442,22 +462,24 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/pack_groceries--pack_multimodal_full_005.mp4",
+          "url": "./media/pack_groceries--pack_multimodal_full_005--1p5x.mp4",
           "poster": "./media/pack_groceries--pack_multimodal_full_005.jpg",
           "run_id": "pack_multimodal_full_005",
           "kind": "accepted",
           "label": "full005 完整录制 · 101.7 s",
-          "duration_s": 101.7,
-          "sampling": "original_video"
+          "duration_s": 67.8,
+          "sampling": "original_video",
+          "playback_speed": 1.5
         },
         {
-          "url": "./media/pack_groceries--pack_groceries_trial_001.mp4",
+          "url": "./media/pack_groceries--pack_groceries_trial_001--1p5x.mp4",
           "poster": "./media/pack_groceries--pack_groceries_trial_001.jpg",
           "run_id": "pack_groceries_trial_001",
           "kind": "development",
           "label": "早期试跑 · 未验收",
-          "duration_s": 9.266667,
-          "sampling": "original_video"
+          "duration_s": 6.177778,
+          "sampling": "original_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -470,13 +492,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/pan_to_stove--pan_multimodal_full_001.mp4",
-          "poster": "./media/pan_to_stove--pan_multimodal_full_001.jpg",
-          "run_id": "pan_multimodal_full_001",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 44.2,
-          "sampling": "original_video"
+          "url": "./media/pan_to_stove--demo--1p5x.mp4",
+          "poster": "./media/pan_to_stove--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 28.533333,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -489,13 +512,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/plug_charger--charger_generic_full_001.mp4",
-          "poster": "./media/plug_charger--charger_generic_full_001.jpg",
-          "run_id": "charger_generic_full_001",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 40.95,
-          "sampling": "original_video"
+          "url": "./media/plug_charger--demo--1p5x.mp4",
+          "poster": "./media/plug_charger--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 27.283333,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -508,13 +532,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/pour_can--pour_generic_full_002.mp4",
-          "poster": "./media/pour_can--pour_generic_full_002.jpg",
-          "run_id": "pour_generic_full_002",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 62.0,
-          "sampling": "original_video"
+          "url": "./media/pour_can--demo--1p5x.mp4",
+          "poster": "./media/pour_can--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 35.933333,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -527,13 +552,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/power_drill--drill_replanned_placement_generic_full_001.mp4",
+          "url": "./media/power_drill--drill_replanned_placement_generic_full_001--1p5x.mp4",
           "poster": "./media/power_drill--drill_replanned_placement_generic_full_001.jpg",
           "run_id": "drill_replanned_placement_generic_full_001",
           "kind": "accepted",
           "label": "验收参考 · 完整总览",
-          "duration_s": 46.4,
-          "sampling": "original_video"
+          "duration_s": 30.933333,
+          "sampling": "original_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -563,13 +589,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/rotate_knob--knob_continuous_generic_full_001.mp4",
+          "url": "./media/rotate_knob--knob_continuous_generic_full_001--1p5x.mp4",
           "poster": "./media/rotate_knob--knob_continuous_generic_full_001.jpg",
           "run_id": "knob_continuous_generic_full_001",
           "kind": "accepted",
           "label": "验收参考 · 完整总览",
-          "duration_s": 37.166667,
-          "sampling": "original_video"
+          "duration_s": 24.777778,
+          "sampling": "original_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -599,13 +626,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/set_table--set_table_multimodal_full_078.mp4",
-          "poster": "./media/set_table--set_table_multimodal_full_078.jpg",
-          "run_id": "set_table_multimodal_full_078",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 42.45,
-          "sampling": "original_video"
+          "url": "./media/set_table--demo--1p5x.mp4",
+          "poster": "./media/set_table--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 28.277778,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -652,13 +680,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/stack_blocks--stack_blocks_multimodal_full_104.mp4",
-          "poster": "./media/stack_blocks--stack_blocks_multimodal_full_104.jpg",
-          "run_id": "stack_blocks_multimodal_full_104",
-          "kind": "accepted",
-          "label": "验收参考 · 完整总览",
-          "duration_s": 69.566667,
-          "sampling": "original_video"
+          "url": "./media/stack_blocks--demo--1p5x.mp4",
+          "poster": "./media/stack_blocks--demo--1p5x.jpg",
+          "run_id": null,
+          "kind": "demo",
+          "label": "任务演示 · 1.5 倍速",
+          "duration_s": 19.622222,
+          "sampling": "provided_video",
+          "playback_speed": 1.5
         }
       ]
     },
@@ -671,13 +700,14 @@
       "trajectory_count": 1,
       "videos": [
         {
-          "url": "./media/tray_carry--tray_thumb_down_generic_full_001.mp4",
+          "url": "./media/tray_carry--tray_thumb_down_generic_full_001--1p5x.mp4",
           "poster": "./media/tray_carry--tray_thumb_down_generic_full_001.jpg",
           "run_id": "tray_thumb_down_generic_full_001",
           "kind": "accepted",
           "label": "验收参考 · 完整总览",
-          "duration_s": 27.933333,
-          "sampling": "original_video"
+          "duration_s": 18.622222,
+          "sampling": "original_video",
+          "playback_speed": 1.5
         }
       ]
     },

@@ -2,7 +2,7 @@
 const $ = (selector) => document.querySelector(selector);
 const labels = { accepted: '已验收', in_progress: '开发中', not_started: '未开始' };
 const batchLabels = { tabletop100: '第二批组合任务（51–100）', daily_tabletop: '日常桌面任务' };
-const kindLabels = { accepted: '验收参考', diagnostic: '调试录像', development: '开发演示' };
+const kindLabels = { demo: '任务演示', accepted: '验收参考', diagnostic: '调试录像', development: '开发演示' };
 let tasks = [], status = 'all', batch = null, previousFocus = null;
 const esc = (value) => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const duration = (seconds) => `${Math.floor(Math.round(seconds) / 60)}:${String(Math.round(seconds) % 60).padStart(2, '0')}`;
@@ -60,8 +60,9 @@ function openTask(id) {
 }
 function clipNotice(v) {
   if (!v) return '该任务尚未开始，暂时没有动作录像。';
+  if (v.kind === 'demo') return '任务演示 · 1.5 倍速。';
   const sample = v.sampling === 'original_video' ? '原始仿真录像。' : '由稀疏真实采样帧按原生时间戳保持生成，并非逐帧连续录制。';
-  return sample + (v.kind === 'accepted' ? '物理与数据已验收；仿人动作质量仍需单独复核。' : '开发过程记录，不代表最终验收效果。');
+  return '1.5 倍速。' + sample + (v.kind === 'accepted' ? '物理与数据已验收；仿人动作质量仍需单独复核。' : '开发过程记录，不代表最终验收效果。');
 }
 function closeDetail() { $('#detail').close(); }
 $('#close').addEventListener('click', closeDetail);
