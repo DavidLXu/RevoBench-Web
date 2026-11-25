@@ -3,7 +3,7 @@ const $ = (selector) => document.querySelector(selector);
 const labels = { accepted: '已验收', in_progress: '开发中', not_started: '未开始' };
 const batchLabels = { tabletop100: '第二批组合任务（51–100）', daily_tabletop: '日常桌面任务' };
 const kindLabels = { demo: '任务演示', accepted: '验收参考', diagnostic: '调试录像', development: '开发演示' };
-let tasks = [], status = 'all', batch = null, previousFocus = null;
+let tasks = [], status = 'accepted', batch = null, previousFocus = null;
 const esc = (value) => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const duration = (seconds) => `${Math.floor(Math.round(seconds) / 60)}:${String(Math.round(seconds) % 60).padStart(2, '0')}`;
 const placeholder = `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="m32 7 23 13v25L32 58 9 45V20Z M9 20l23 13 23-13 M32 33v25 M20 13l23 13v14"/></svg><span>等待动作录制</span><small>尚无演示视频</small>`;
@@ -98,7 +98,7 @@ fetch('./snapshot.json?v=20261106-daily').then(r => { if (!r.ok) throw Error('Ta
   $('#hero-meta').innerHTML = `<span>${tasks.length} 项操作任务</span><span>${tasks.reduce((n,t) => n+t.videos.length,0)} 段仿真视频</span><span>${tasks.reduce((n,t) => n+t.trajectory_count,0)} 条验收参考轨迹</span>`;
   $('#snapshot-date').textContent = data.snapshot_date.replaceAll('-', '.');
   const selectedBatch = Object.keys(batchLabels).find(key => location.hash === '#batch=' + key) || null;
-  setStatus(location.hash === '#not-started' || selectedBatch ? 'not_started' : 'all', selectedBatch);
+  setStatus(location.hash === '#not-started' || selectedBatch ? 'not_started' : status, selectedBatch);
   if (location.hash === '#not-started' || selectedBatch) $('#tasks').scrollIntoView();
   if (location.hash.startsWith('#task=')) openTask(decodeURIComponent(location.hash.slice(6)));
 }).catch(() => { $('#error').hidden = false; $('#result-count').textContent = '列表加载失败'; });
