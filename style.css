@@ -49,3 +49,17 @@
   .mode-mark { gap: 3px; }
   .mode-mark b { font-size: 14px; }
 }
+
+.metrics-table th:first-child { width: 25%; }
+.metrics-table thead th:nth-child(2) { width: 19%; }
+.metrics-table td:last-child, .metrics-table thead th:last-child { text-align: left; }
+.metrics-table td:last-child { color: #424751; }
+.metric-direction { color: #195493; font-weight: 650; }
+.metric-direction span { font-size: 1.25em; }
+@media (max-width: 560px) {
+  .metrics-table th:first-child { width: 25%; }
+  .metrics-table thead th:nth-child(2) { width: 23%; }
+  .metric-direction { font-size: 12px; white-space: nowrap; }
+  .metric-direction span { display: block; }
+  .metrics-table td:last-child { padding-right: 8px; }
+}

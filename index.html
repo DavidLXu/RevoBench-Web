@@ -5,7 +5,7 @@
 <title>RevoBench: An Agent-Native Framework for Dexterous Manipulation Benchmarking</title>
 <meta name="description" content="RevoBench 基于高保真数字资产，由 Agent 构建灵巧操作环境并生成示例轨迹，用于任务验证与动作诊断。">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="./style.css?v=20261103-second50-modes"><script src="./app.js?v=20261125-accepted" defer></script>
+<link rel="stylesheet" href="./style.css?v=20261103-second50-modes-metrics"><script src="./app.js?v=20261125-accepted" defer></script>
 </head>
 <body>
 <header class="nav-shell"><nav class="nav" aria-label="主导航"><a class="brand" href="#top">RevoBench<span class="brand-dot">.</span></a><div class="nav-links"><a href="#about">项目介绍</a><a class="pending-nav" href="#not-started" data-task-status="not_started">未开始（146）</a><a class="pill primary" href="#tasks">场景任务集 <span aria-hidden="true">↗</span></a></div></nav></header>
@@ -55,6 +55,49 @@
         </tbody>
       </table>
       <p>两种模式沿用相同的物理成功条件，分别报告成绩。表中列出的是设计约定。在线模式的实时推进和观测隔离仍待实现与验证。</p>
+    </div>
+  </div>
+</section>
+<section class="section-space" id="agent-metrics" aria-labelledby="agent-metrics-title">
+  <div class="wrap about-layout">
+    <h2 id="agent-metrics-title">Agent 评测指标</h2>
+    <div class="about-copy">
+      <p>离线和在线模式分别报告。先看同一任务的物理成功率，再比较完成任务的代价和动作质量。一次求解中，重置前的尝试也计入总量。</p>
+      <table class="mode-table metrics-table" aria-labelledby="agent-metrics-title">
+        <thead><tr><th scope="col">指标</th><th scope="col">方向</th><th scope="col">如何计算</th></tr></thead>
+        <tbody>
+          <tr>
+            <th scope="row">规划总 token 数</th>
+            <td class="metric-direction"><span aria-hidden="true">↓</span> 越低越好</td>
+            <td>累计所有规划调用的输入和输出，包含思考 token。按服务回执计数，思考 token 只计一次。缺失的用量标为未记录。</td>
+          </tr>
+          <tr>
+            <th scope="row">等模型的时间（秒）</th>
+            <td class="metric-direction"><span aria-hidden="true">↓</span> 越低越好</td>
+            <td>累计因等待模型而暂停仿真，或上一段动作已结束、机械臂只能等待新指令的实际秒数。边执行边推理的时段不计入。</td>
+          </tr>
+          <tr>
+            <th scope="row">模型与执行总用时（秒）</th>
+            <td class="metric-direction"><span aria-hidden="true">↓</span> 越低越好</td>
+            <td>从开始求解到任务结束的实际秒数，包含规划、执行、等待和重试。推理与动作同时进行时只计一次。</td>
+          </tr>
+          <tr>
+            <th scope="row">纯执行用时（秒）</th>
+            <td class="metric-direction"><span aria-hidden="true">↓</span> 越低越好</td>
+            <td>按仿真时钟累计各次尝试中执行动作的时长，包含任务要求的持稳和释放观察，扣除纯等模型的时段。</td>
+          </tr>
+          <tr>
+            <th scope="row">拟人程度</th>
+            <td class="metric-direction"><span aria-hidden="true">↑</span> 越高越好</td>
+            <td>人工按原速回放评估抓姿、手腕姿态和双手分工是否自然。</td>
+          </tr>
+          <tr>
+            <th scope="row">模型调用次数</th>
+            <td class="metric-direction"><span aria-hidden="true">↓</span> 越低越好</td>
+            <td>每发起一次模型请求计一次，包含首次规划、后续修正和重试。一次回复给出多个移动目标仍算一次。</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
