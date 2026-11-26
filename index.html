@@ -67,6 +67,16 @@
         <thead><tr><th scope="col">指标</th><th scope="col">方向</th><th scope="col">如何计算</th></tr></thead>
         <tbody>
           <tr>
+            <th scope="row">首次尝试成功率</th>
+            <td class="metric-direction"><span aria-hidden="true">↑</span> 越高越好</td>
+            <td>首次尝试通过完整物理验收的初态数 ÷ 全部测试初态数。抓滑后可以当场重抓。一旦回滚、重置或回合结束，首次尝试即结束。</td>
+          </tr>
+          <tr>
+            <th scope="row">给定预算内的解题率</th>
+            <td class="metric-direction"><span aria-hidden="true">↑</span> 越高越好</td>
+            <td>在预算内通过完整物理验收的初态数 ÷ 全部测试初态数。首版每个初态的预算为<strong>实际总用时 ≤ 5 分钟</strong>且<strong>规划总量 ≤ 25 万 token</strong>。每个初态最多计一次成功。</td>
+          </tr>
+          <tr>
             <th scope="row">规划总 token 数</th>
             <td class="metric-direction"><span aria-hidden="true">↓</span> 越低越好</td>
             <td>累计所有规划调用的输入和输出，包含思考 token。按服务回执计数，思考 token 只计一次。缺失的用量标为未记录。</td>
@@ -98,6 +108,7 @@
           </tr>
         </tbody>
       </table>
+      <p><strong>预算从 Agent 收到任务和初始观测时起算，到首次通过完整物理验收为止。</strong>等待、失败尝试和重试都累计，回滚不会重置预算。token 包含全部调用的输入、输出和思考用量，思考 token 只计一次。超时、超量或未解出的初态仍计入分母。用量缺失且无法核实是否达标的初态单列，保留在分母中。</p>
     </div>
   </div>
 </section>
