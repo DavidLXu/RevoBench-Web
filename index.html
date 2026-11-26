@@ -5,11 +5,11 @@
 <title>RevoBench: An Agent-Native Benchmark for Tactile Dexterity</title>
 <meta name="description" content="RevoBench 基于高保真数字资产，由 Agent 构建灵巧操作环境并生成示例轨迹，用于任务验证与动作诊断。">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="./style.css?v=20261103-second50-modes-metrics-budget"><script src="./app.js?v=20261125-accepted" defer></script>
+<link rel="stylesheet" href="./style.css?v=task-classification-v1"><script src="./app.js?v=task-classification-v1" defer></script>
 <script src="./evaluation.js?v=1" defer></script>
 </head>
 <body>
-<header class="nav-shell"><nav class="nav" aria-label="主导航"><a class="brand" href="#top">RevoBench<span class="brand-dot">.</span></a><div class="nav-links"><a href="#about">项目介绍</a><a class="pending-nav" href="#not-started" data-task-status="not_started">未开始（146）</a><a class="pill primary" href="#tasks">场景任务集 <span aria-hidden="true">↗</span></a></div></nav></header>
+<header class="nav-shell"><nav class="nav" aria-label="主导航"><a class="brand" href="#top">RevoBench<span class="brand-dot">.</span></a><div class="nav-links"><a href="#about">项目介绍</a><a href="#suites">任务分类</a><a class="pending-nav" href="#not-started" data-task-status="not_started">未开始（146）</a><a class="pill primary" href="#tasks">场景任务集 <span aria-hidden="true">↗</span></a></div></nav></header>
 <main id="top">
 <section class="hero wrap">
 <h1 class="project-title"><span class="project-name">RevoBench:</span> <span class="project-subtitle">An Agent-Native Benchmark for Tactile Dexterity</span></h1>
@@ -17,6 +17,97 @@
 <div class="hero-stage"><video id="hero-video" muted loop playsinline preload="metadata" poster="./media/carry_dutch_oven--demo--1p5x.jpg" aria-label="双手搬双耳锅仿真演示"><source src="./media/carry_dutch_oven--demo--1p5x.mp4" type="video/mp4"></video><div class="hero-caption"><div><span class="tiny-label">示例轨迹</span><strong>双手搬双耳锅</strong><span>1.5 倍速</span></div><button class="round-button" id="hero-toggle" aria-label="播放首页演示"><span aria-hidden="true">▶</span></button></div></div>
 <div class="hero-meta" id="hero-meta"><span>175 项操作任务</span><span>30 段仿真视频</span><span>22 条验收参考轨迹</span></div>
 </section>
+
+<section class="proposal-entry wrap" aria-labelledby="pending-title"><div class="proposal-panel"><div><h2 id="pending-title">新任务环境</h2><p>新增 39 个日常桌面环境，包括发牌、叠盘、刷洗杯子和分拣餐具。每项都可以查看机器人与道具的初始摆放。</p><p class="proposal-note">环境已准备，动作开发尚未开始。静态图不计入轨迹数量。</p></div><div class="proposal-actions"><a class="pill primary" href="#batch=daily_tabletop" data-task-batch="daily_tabletop">查看新增 39 项 ↗</a><a href="#batch=tabletop100" data-task-batch="tabletop100">第二批 50 项组合任务 ↗</a><a href="#not-started" data-task-status="not_started">全部 146 项未开始任务 ↗</a><a href="./pending-51-100/">第二批任务说明 ↗</a><a href="./pending/">第一批任务说明 ↗</a></div></div></section>
+<section class="benchmark-arch wrap" id="suites" aria-labelledby="suites-title">
+  <h2 id="suites-title">任务分类</h2>
+  <p class="arch-lead">按任务考察的能力分为五类。一个任务可属于一至两类，例如锤击同时考察工具使用和触觉反馈。另有三项基础抓放用于校准。点击类别可查看相应任务。</p>
+  <div class="suite-cards" id="suite-cards" role="group" aria-label="按能力浏览任务"></div>
+  <p class="arch-lead">任务也可按双手如何配合、触觉用在哪里、需要怎样的手指动作，以及规划包含多少阶段筛选。ID、Visual-OOD、Physics-OOD 描述测试时改变的条件，分别考察同分布摆位、外观变化和物理变化。</p>
+</section>
+<section class="catalog wrap section-space" id="tasks">
+  <div class="section-heading">
+    <div>
+      <h2>场景任务集</h2>
+    </div>
+  </div>
+
+  <div class="catalog-tools">
+    <div class="filter-tabs" role="group" aria-label="按任务状态筛选">
+      <button data-status="all" aria-pressed="false">全部 <span>175</span></button>
+      <button class="active" data-status="accepted" aria-pressed="true">已验收 <span>22</span></button>
+      <button data-status="in_progress" aria-pressed="false">开发中 <span>7</span></button>
+      <button data-status="not_started" aria-pressed="false">未开始 <span>146</span></button>
+    </div>
+    <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="搜索任务、ID 或属性" aria-label="搜索任务"></label>
+  </div>
+
+  <div class="suite-tabs" id="suite-tabs" role="group" aria-label="按五大能力子榜筛选">
+    <button class="active" data-suite="all" aria-pressed="true">全部子榜 <span id="suite-count-all">175</span></button>
+    <button data-suite="Coord" aria-pressed="false"><b>Coord</b> 双臂协同 <span id="suite-count-Coord">68</span></button>
+    <button data-suite="Dex" aria-pressed="false"><b>Dex</b> 五指灵巧 <span id="suite-count-Dex">54</span></button>
+    <button data-suite="Touch" aria-pressed="false"><b>Touch</b> 触觉反馈 <span id="suite-count-Touch">75</span></button>
+    <button data-suite="Tool" aria-pressed="false"><b>Tool</b> 工具使用 <span id="suite-count-Tool">47</span></button>
+    <button data-suite="Long" aria-pressed="false"><b>Long</b> 长程组合 <span id="suite-count-Long">42</span></button>
+  </div>
+
+  <div class="taxonomy-bar" aria-label="按四维正交分类筛选">
+    <label class="tax-select">
+      <span>双手耦合</span>
+      <select id="filter-coordination">
+        <option value="all">全部（coordination）</option>
+        <option value="unimanual">单手独立 · unimanual</option>
+        <option value="stabilize_and_act">主辅协同 · stabilize_and_act</option>
+        <option value="parallel_async">并行异步 · parallel_async</option>
+        <option value="closed_chain">闭链共持 · closed_chain</option>
+        <option value="handover_relay">跨手交接 · handover_relay</option>
+        <option value="dual_tool">双工具协同 · dual_tool</option>
+      </select>
+    </label>
+    <label class="tax-select">
+      <span>触觉机制</span>
+      <select id="filter-tactile">
+        <option value="all">全部（tactile_mode）</option>
+        <option value="tight_fit_wrench">紧公差力矩导纳 · tight_fit_wrench</option>
+        <option value="occluded_exploration">盲区遮挡探索 · occluded_exploration</option>
+        <option value="slip_force_control">临界防滑与力控 · slip_force_control</option>
+        <option value="tool_mediated">工具传导感知 · tool_mediated</option>
+        <option value="grasp_confirmation">接触与释放确认 · grasp_confirmation</option>
+      </select>
+    </label>
+    <label class="tax-select">
+      <span>五指灵巧度</span>
+      <select id="filter-dexterity">
+        <option value="all">全部（dexterity_level）</option>
+        <option value="power_pinch">L1 包络与对捏 · power_pinch</option>
+        <option value="functional_fingers">L2 多指功能分指 · functional_fingers</option>
+        <option value="in_hand_extrinsic">L3 手内与外源灵巧 · in_hand_extrinsic</option>
+      </select>
+    </label>
+    <label class="tax-select">
+      <span>规划跨度</span>
+      <select id="filter-horizon">
+        <option value="all">全部（horizon）</option>
+        <option value="atomic">短程原子 · atomic</option>
+        <option value="sequential">中程序列 · sequential</option>
+        <option value="long_horizon">长程组合 · long_horizon</option>
+      </select>
+    </label>
+    <button type="button" class="reset-filters" id="reset-filters" hidden>重置筛选</button>
+  </div>
+
+  <div class="catalog-note"><span id="result-count" role="status">175 项任务</span><span>展示快照 · <time id="snapshot-date">2026.11.23</time></span></div>
+  <div id="grid" class="task-grid"></div><p id="empty" class="empty" hidden>没有匹配当前筛选条件的任务，可点击“重置筛选”恢复。</p><p id="error" class="empty" hidden role="alert">任务列表暂时无法加载，请刷新页面重试。</p>
+  <p class="acceptance-note">“已验收”指物理与数据验收通过；动作的仿人程度仍需单独复核。3 项单手原子抓放任务保留为不归入专项榜单的基础校准集（Sanity Calibration）。“未开始”任务的图片为带 RevoTron 的静态初态，没有动作录像。</p>
+</section>
+<section class="about section-space" id="about"><div class="wrap about-layout">
+<h2>项目介绍</h2>
+<div class="about-copy">
+<p>RevoBench 探索用 Agent 完成灵巧操作 benchmark 的构建与验证。我们基于高保真的数字资产搭建仿真环境，由 Agent 编写任务、生成示例轨迹，并根据执行结果检查和修改实现。</p>
+<p>示例轨迹用于验证任务能否完成，也用于发现问题。物体到达目标位置时，手臂仍可能出现不自然的绕行，或依靠拇指背部抓持。我们结合执行记录检查姿态、运动连续性与接触方式，并要求机器人从默认姿态出发，完成后回到默认姿态。</p>
+<p>后续将由 Agent 参与构建评测程序，在固定的任务条件下比较不同 agent-based policy。环境、示例轨迹和评测接口将整理为统一的任务包，方便新的 Agent 独立运行和复现结果。</p>
+<p class="about-jumps"><a href="#agent-modes">两种使用模式</a> · <a href="#agent-metrics">评测指标</a> · <a href="#budget-explorer">预算筛选</a></p>
+</div></div></section>
 <section class="about section-space" id="agent-modes" aria-labelledby="agent-modes-title">
   <div class="wrap about-layout">
     <h2 id="agent-modes-title">Agent 的两种使用模式</h2>
@@ -63,7 +154,7 @@
   <div class="wrap about-layout">
     <h2 id="agent-metrics-title">Agent 评测指标</h2>
     <div class="about-copy">
-      <p>离线和在线模式分别报告。先看同一任务的物理成功率，再比较完成任务的代价和动作质量。一次求解中，重置前的尝试也计入总量。</p>
+      <p>离线和在线模式分别报告。先看同一任务的物理成功率，再比较完成任务的代价和动作质量。离线模式累计暂停推理、回滚和重试的成本。在线模式按真实经过时间计时，只有机械臂实际等候新指令的时段计入等模型时间。</p>
       <table class="mode-table metrics-table" aria-labelledby="agent-metrics-title">
         <thead><tr><th scope="col">指标</th><th scope="col">方向</th><th scope="col">如何计算</th></tr></thead>
         <tbody>
@@ -152,20 +243,6 @@
     <p>脚本从逐帧物体位姿、接触力和终态检查任务条件，并输出各项通过或失败。插杆检查插入深度、接触力和松手稳定；搬箱还要检查双手是否共同承托、落点和箱体姿态。现有部分脚本（例如插杆）还依赖参考 planner 的阶段名或完成标志。用于任意外部 Agent 的正式评分前，需要改为从物理轨迹本身识别这些阶段。</p>
   </details>
 </section>
-<section class="proposal-entry wrap" aria-labelledby="pending-title"><div class="proposal-panel"><div><h2 id="pending-title">新任务环境</h2><p>新增 39 个日常桌面环境，包括发牌、叠盘、刷洗杯子和分拣餐具。每项都可以查看机器人与道具的初始摆放。</p><p class="proposal-note">环境已准备，动作开发尚未开始。静态图不计入轨迹数量。</p></div><div class="proposal-actions"><a class="pill primary" href="#batch=daily_tabletop" data-task-batch="daily_tabletop">查看新增 39 项 ↗</a><a href="#batch=tabletop100" data-task-batch="tabletop100">第二批 50 项组合任务 ↗</a><a href="#not-started" data-task-status="not_started">全部 146 项未开始任务 ↗</a><a href="./pending-51-100/">第二批任务说明 ↗</a><a href="./pending/">第一批任务说明 ↗</a></div></div></section>
-<section class="catalog wrap section-space" id="tasks"><div class="section-heading"><h2>场景任务集</h2></div>
-<div class="catalog-tools"><div class="filter-tabs" role="group" aria-label="按任务状态筛选"><button data-status="all" aria-pressed="false">全部 <span>175</span></button><button class="active" data-status="accepted" aria-pressed="true">已验收 <span>22</span></button><button data-status="in_progress" aria-pressed="false">开发中 <span>7</span></button><button data-status="not_started" aria-pressed="false">未开始 <span>146</span></button></div><label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="搜索任务" aria-label="搜索任务"></label></div>
-<div class="catalog-note"><span id="result-count" role="status">175 项任务</span><span>展示快照 · <time id="snapshot-date">2026.11.06</time></span></div>
-<div id="grid" class="task-grid"></div><p id="empty" class="empty" hidden>没有找到相关任务。试试其他关键词。</p><p id="error" class="empty" hidden role="alert">任务列表暂时无法加载，请刷新页面重试。</p>
-<p class="acceptance-note">“已验收”指物理与数据验收通过；动作的仿人程度仍需单独复核。轨迹数为已登记的验收参考，不代表全部历史数据。开发中视频包含调试记录。“未开始”任务的图片为带 RevoTron 的静态初态，没有动作录像。</p>
-</section>
-<section class="about section-space" id="about"><div class="wrap about-layout">
-<h2>项目介绍</h2>
-<div class="about-copy">
-<p>RevoBench 探索用 Agent 完成灵巧操作 benchmark 的构建与验证。我们基于高保真的数字资产搭建仿真环境，由 Agent 编写任务、生成示例轨迹，并根据执行结果检查和修改实现。</p>
-<p>示例轨迹用于验证任务能否完成，也用于发现问题。物体到达目标位置时，手臂仍可能出现不自然的绕行，或依靠拇指背部抓持。我们结合执行记录检查姿态、运动连续性与接触方式，并要求机器人从默认姿态出发，完成后回到默认姿态。</p>
-<p>后续将由 Agent 参与构建评测程序，在固定的任务条件下比较不同 agent-based policy。环境、示例轨迹和评测接口将整理为统一的任务包，方便新的 Agent 独立运行和复现结果。</p>
-</div></div></section>
 </main>
 <footer class="wrap footer"><a class="brand" href="#top">RevoBench<span class="brand-dot">.</span></a><p>灵巧操作任务集 · 静态展示</p><a href="https://github.com/BrainCoTech/RevoBench">项目代码 ↗</a></footer>
 <dialog id="detail" aria-labelledby="detail-title"><button class="close-button" id="close" aria-label="关闭任务详情">✕</button><div id="detail-body"></div></dialog>
