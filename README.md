@@ -1,4 +1,4 @@
-# RevoBench: An Agent-Native Benchmark for Dexterous Manipulation with Multimodal Tactile Sensing
+# RevoBench: An Agent-Native Benchmark for Tactile Dexterity
 
 公开地址：https://davidlxu.github.io/RevoBench-Web/
 
