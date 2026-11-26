@@ -1,4 +1,4 @@
-# RevoBench: An Agent-Native Framework for Dexterous Manipulation Benchmarking
+# RevoBench: An Agent-Native Benchmark for Dexterous Manipulation
 
 公开地址：https://davidlxu.github.io/RevoBench-Web/
 
