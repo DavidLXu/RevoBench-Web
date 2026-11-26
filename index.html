@@ -5,7 +5,7 @@
 <title>RevoBench: An Agent-Native Framework for Dexterous Manipulation Benchmarking</title>
 <meta name="description" content="RevoBench 基于高保真数字资产，由 Agent 构建灵巧操作环境并生成示例轨迹，用于任务验证与动作诊断。">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="./style.css?v=20261103-second50"><script src="./app.js?v=20261125-accepted" defer></script>
+<link rel="stylesheet" href="./style.css?v=20261103-second50-modes"><script src="./app.js?v=20261125-accepted" defer></script>
 </head>
 <body>
 <header class="nav-shell"><nav class="nav" aria-label="主导航"><a class="brand" href="#top">RevoBench<span class="brand-dot">.</span></a><div class="nav-links"><a href="#about">项目介绍</a><a class="pending-nav" href="#not-started" data-task-status="not_started">未开始（146）</a><a class="pill primary" href="#tasks">场景任务集 <span aria-hidden="true">↗</span></a></div></nav></header>
@@ -20,11 +20,41 @@
   <div class="wrap about-layout">
     <h2 id="agent-modes-title">Agent 的两种使用模式</h2>
     <div class="about-copy">
-      <h3>离线 Agent · 自由探索</h3>
-      <p>Agent 可以暂停仿真等待模型输出，读取物体位姿、速度和接触等仿真真值，也可以保存、重置或恢复状态，反复尝试不同方法。例如插杆碰到孔沿时，它可以保存这一刻，查看销孔偏差，从同一个接触位置试出有效的修正动作。</p>
-      <h3>在线 Agent · 模拟真机</h3>
-      <p>物理世界按真实时间持续推进。模型仍在推理时，手中的插杆就可能滑动。Agent 只能根据任务指令和真机可获得的相机画面、关节状态、触觉来判断偏差，并在当前状态下纠正动作。仿真器不会向它提供物体真值，也不能在回合中倒带重试。</p>
-      <p>两种模式采用相同的物理成功条件，分别报告结果。当前执行循环会等待模型输出；在线模式的实时推进和观测隔离仍待实现与验证。</p>
+      <table class="mode-table" aria-labelledby="agent-modes-title">
+        <thead><tr>
+          <th scope="col">特性</th>
+          <th scope="col">离线 Agent<small>自由探索</small></th>
+          <th scope="col">在线 Agent<small>模拟真机</small></th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <th scope="row">暂停仿真，等待模型输出</th>
+            <td><span class="mode-mark yes"><b aria-hidden="true">✓</b>可以</span></td>
+            <td><span class="mode-mark no"><b aria-hidden="true">✕</b>不可</span></td>
+          </tr>
+          <tr>
+            <th scope="row">回合内重置或回滚状态，重新尝试</th>
+            <td><span class="mode-mark yes"><b aria-hidden="true">✓</b>可以</span></td>
+            <td><span class="mode-mark no"><b aria-hidden="true">✕</b>不可</span></td>
+          </tr>
+          <tr>
+            <th scope="row">读取物体位姿、速度、接触等仿真真值</th>
+            <td><span class="mode-mark yes"><b aria-hidden="true">✓</b>可以</span></td>
+            <td><span class="mode-mark no"><b aria-hidden="true">✕</b>不可</span></td>
+          </tr>
+          <tr>
+            <th scope="row">要求仿真在推理期间持续实时推进</th>
+            <td><span class="mode-mark no"><b aria-hidden="true">✕</b>不要求</span></td>
+            <td><span class="mode-mark yes"><b aria-hidden="true">✓</b>必须</span></td>
+          </tr>
+          <tr>
+            <th scope="row">使用相机、关节状态和触觉进行纠错</th>
+            <td><span class="mode-mark yes"><b aria-hidden="true">✓</b>可以</span></td>
+            <td><span class="mode-mark yes"><b aria-hidden="true">✓</b>可以</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>两种模式沿用相同的物理成功条件，分别报告成绩。表中列出的是设计约定。在线模式的实时推进和观测隔离仍待实现与验证。</p>
     </div>
   </div>
 </section>
