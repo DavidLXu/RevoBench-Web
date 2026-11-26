@@ -63,3 +63,27 @@
   .metric-direction span { display: block; }
   .metrics-table td:last-child { padding-right: 8px; }
 }
+
+.eval-guide {padding-block:36px;max-width:920px}
+.eval-guide h2 {margin:0 0 18px;font-size:clamp(25px,4vw,36px);letter-spacing:-.04em}
+.eval-guide p,.eval-guide li,.eval-guide dd {font-size:15px;line-height:1.75;color:#414854}
+.eval-guide p {margin:12px 0 18px}
+.eval-guide label,.eval-guide dt,.eval-guide summary,.budget-records caption {font-weight:650}
+.eval-guide select {max-width:100%;padding:8px 10px;color:inherit;background:#fff;border:1px solid var(--line);border-radius:8px;font:inherit}
+.eval-guide details {border-top:1px solid var(--line);padding:14px 0}
+.eval-guide summary {cursor:pointer}
+.budget-sliders {display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:18px 0}
+.budget-sliders label {display:flex;justify-content:space-between;gap:8px;font-size:14px}
+.budget-sliders output,.budget-score strong {color:#195493;font-variant-numeric:tabular-nums}
+.budget-sliders input {width:100%;margin:8px 0 0;accent-color:#195493}
+.budget-score {display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.budget-score strong {font-size:32px}
+.budget-records {width:100%;border-collapse:collapse;font-size:14px}
+.budget-records caption {text-align:left;margin:8px 0}
+.budget-records th,.budget-records td {text-align:left;padding:9px 3px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.budget-records thead {color:var(--muted)}
+#protocol-detail {margin:18px 0 22px}
+#protocol-detail dt {margin-top:10px}
+#protocol-detail dd {margin:3px 0;overflow-wrap:anywhere}
+#protocol-detail a {color:#195493;text-decoration:underline}
+@media(max-width:600px){.budget-sliders{grid-template-columns:1fr;gap:14px}.budget-records{font-size:12px}.eval-guide select{display:block;margin-top:6px;width:100%}}

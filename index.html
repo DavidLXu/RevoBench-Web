@@ -5,7 +5,8 @@
 <title>RevoBench: An Agent-Native Benchmark for Tactile Dexterity</title>
 <meta name="description" content="RevoBench 基于高保真数字资产，由 Agent 构建灵巧操作环境并生成示例轨迹，用于任务验证与动作诊断。">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="./style.css?v=20261103-second50-modes-metrics"><script src="./app.js?v=20261125-accepted" defer></script>
+<link rel="stylesheet" href="./style.css?v=20261103-second50-modes-metrics-budget"><script src="./app.js?v=20261125-accepted" defer></script>
+<script src="./evaluation.js?v=1" defer></script>
 </head>
 <body>
 <header class="nav-shell"><nav class="nav" aria-label="主导航"><a class="brand" href="#top">RevoBench<span class="brand-dot">.</span></a><div class="nav-links"><a href="#about">项目介绍</a><a class="pending-nav" href="#not-started" data-task-status="not_started">未开始（146）</a><a class="pill primary" href="#tasks">场景任务集 <span aria-hidden="true">↗</span></a></div></nav></header>
@@ -111,6 +112,45 @@
       <p><strong>预算从 Agent 收到任务和初始观测时起算，到首次通过完整物理验收为止。</strong>等待、失败尝试和重试都累计，回滚不会重置预算。token 包含全部调用的输入、输出和思考用量，思考 token 只计一次。超时、超量或未解出的初态仍计入分母。用量缺失且无法核实是否达标的初态单列，保留在分母中。</p>
     </div>
   </div>
+</section>
+<section class="wrap eval-guide" id="budget-explorer" aria-labelledby="budget-title">
+  <h2 id="budget-title">预算内能完成多少？</h2>
+  <div class="eval-controls">
+    <label for="budget-source">数据来源</label>
+    <select id="budget-source">
+      <option value="example">AgenticDexterity · 实测示例</option>
+      <option value="revobench">RevoBench · 正式评测</option>
+    </select>
+  </div>
+  <p id="budget-scope">正在载入运行记录…</p>
+  <div class="budget-sliders">
+    <div><label for="budget-time">实际总用时上限 <output id="time-value" for="budget-time">300 秒</output></label>
+      <input id="budget-time" type="range" min="0" max="600" step="1" value="300" list="budget-time-marks"><datalist id="budget-time-marks"></datalist></div>
+    <div><label for="budget-tokens">规划总 token 上限 <output id="token-value" for="budget-tokens">250,000</output></label>
+      <input id="budget-tokens" type="range" min="0" max="500000" step="1000" value="250000" list="budget-token-marks"><datalist id="budget-token-marks"></datalist></div>
+  </div>
+  <div class="budget-score" role="status"><strong id="budget-percent">—</strong><span id="budget-count"></span></div>
+  <p id="budget-empty" hidden></p>
+  <table id="budget-records" class="budget-records" hidden>
+    <caption>同时满足两项预算的记录</caption>
+    <thead><tr><th scope="col">记录</th><th scope="col">实际用时</th><th scope="col">总 token</th><th scope="col">物理结果</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</section>
+<section class="wrap eval-guide" id="task-protocols" aria-labelledby="protocol-title">
+  <h2 id="protocol-title">任务怎样算成功？初态怎样变化？</h2>
+  <p>175 项任务中，29 项已登记评分脚本，22 项有物理与数据双验收记录，10 项启用了物体摆位随机化门控。每项任务分别定义目标、允许的接触、松手或持稳条件，以及初态可变范围。拟人程度另由人工查看原速回放。</p>
+  <label for="protocol-task">查看任务标准</label>
+  <select id="protocol-task" disabled><option>正在载入任务…</option></select>
+  <div id="protocol-detail" aria-live="polite"></div>
+  <details><summary>种子怎么选？多个物体怎样随机摆放？</summary>
+    <p>运行者用 <code>--seed</code> 指定整数，默认 0。启用 <code>--randomize</code> 后，当前接入的 10 项在 reset 时按任务声明的范围采样整组物体的 X、Y 平移，保持组内相对位置。每个候选布局由任务自己的可达性、接近路径或碰撞检查筛选，最多尝试 32 次；全部被拒则报告初态生成失败。记录保存种子、实际偏移和拒绝原因。</p>
+    <p>例如插杆与孔座同移，厨房的锅、食材和碗也同移。公开归档的 10 个随机成功实例中，9 个用 seed 1，电钻用 seed 4。它们是可复现的参考实例。要比较不同 Agent 的成功率，应事先冻结有效初态清单，让各方法跑同一批，保留失败结果。</p>
+    <p>材质、灯光与相机安装位姿属于外观随机化，可用 <code>--appearance-seed</code> 单独控制，默认沿用本回合的 seed。每个物体独立平移或转动、替换几何、改变摩擦或质量，都需要任务单独声明范围、约束并重新验证。</p>
+  </details>
+  <details><summary>评分脚本读什么？</summary>
+    <p>脚本从逐帧物体位姿、接触力和终态检查任务条件，并输出各项通过或失败。插杆检查插入深度、接触力和松手稳定；搬箱还要检查双手是否共同承托、落点和箱体姿态。现有部分脚本（例如插杆）还依赖参考 planner 的阶段名或完成标志。用于任意外部 Agent 的正式评分前，需要改为从物理轨迹本身识别这些阶段。</p>
+  </details>
 </section>
 <section class="proposal-entry wrap" aria-labelledby="pending-title"><div class="proposal-panel"><div><h2 id="pending-title">新任务环境</h2><p>新增 39 个日常桌面环境，包括发牌、叠盘、刷洗杯子和分拣餐具。每项都可以查看机器人与道具的初始摆放。</p><p class="proposal-note">环境已准备，动作开发尚未开始。静态图不计入轨迹数量。</p></div><div class="proposal-actions"><a class="pill primary" href="#batch=daily_tabletop" data-task-batch="daily_tabletop">查看新增 39 项 ↗</a><a href="#batch=tabletop100" data-task-batch="tabletop100">第二批 50 项组合任务 ↗</a><a href="#not-started" data-task-status="not_started">全部 146 项未开始任务 ↗</a><a href="./pending-51-100/">第二批任务说明 ↗</a><a href="./pending/">第一批任务说明 ↗</a></div></div></section>
 <section class="catalog wrap section-space" id="tasks"><div class="section-heading"><h2>场景任务集</h2></div>

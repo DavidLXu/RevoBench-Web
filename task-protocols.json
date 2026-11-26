@@ -1,0 +1,2541 @@
+[
+ {
+  "id": "arrange_condiments",
+  "title": "盐和胡椒瓶归位",
+  "status": "accepted",
+  "goal": "两只调料瓶竖直放在后方目标区",
+  "criteria": [],
+  "oracle": "revobench.tasks.arrange_condiments.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "assemble_gears",
+  "title": "齿轮装配",
+  "status": "not_started",
+  "goal": "Place the three gears onto their matching shafts.",
+  "criteria": [],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "carry_dutch_oven",
+  "title": "双手搬双耳锅",
+  "status": "accepted",
+  "goal": "双手提锅并放稳",
+  "criteria": [],
+  "oracle": "revobench.tasks.carry_dutch_oven.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "coffee_handle_turn",
+  "title": "旋转咖啡机手柄",
+  "status": "accepted",
+  "goal": "在已有关节范围内旋转并复位",
+  "criteria": [],
+  "oracle": "revobench.tasks.coffee_handle_turn.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "cup_hang",
+  "title": "挂杯",
+  "status": "accepted",
+  "goal": "Pick up the cup, hang it on the rack, release and withdraw.",
+  "criteria": [
+   "杯子由架子支撑，松手后在原规定窗口内保持位置和姿态稳定"
+  ],
+  "oracle": "revobench.tasks.cup_hang.metrics:evaluate_support",
+  "gate": true,
+  "range": [
+   -0.01,
+   0.01
+  ],
+  "seed": 1,
+  "group": [
+   "cup_holder",
+   "cup_forest_green"
+  ],
+  "offsetMm": [
+   0.236,
+   9.009
+  ]
+ },
+ {
+  "id": "daily_tabletop_clean_knife_with_cloth",
+  "title": "用布擦去餐刀上的污迹",
+  "status": "not_started",
+  "goal": "用布擦去餐刀上的污迹",
+  "criteria": [
+   "扶稳餐刀，用布擦除刀身标记。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_clean_plate_with_eraser",
+  "title": "用板擦擦去盘上污迹",
+  "status": "not_started",
+  "goal": "用板擦擦去盘上污迹",
+  "criteria": [
+   "扶住盘子，用板擦擦净标记。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_collect_toys_into_basket",
+  "title": "将四件玩具收入篮中",
+  "status": "not_started",
+  "goal": "将四件玩具收入篮中",
+  "criteria": [
+   "用不同手指抓取四件玩具并收入篮中。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_collect_waste_into_bin",
+  "title": "将桌面垃圾投入桶内",
+  "status": "not_started",
+  "goal": "将桌面垃圾投入桶内",
+  "criteria": [
+   "逐个拾起纸团，投入垃圾桶。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_cover_ball_with_cup",
+  "title": "用杯子罩住球",
+  "status": "not_started",
+  "goal": "用杯子罩住球",
+  "criteria": [
+   "翻转杯子，完整罩住球。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_deal_playing_cards",
+  "title": "分发五张扑克牌",
+  "status": "not_started",
+  "goal": "分发五张扑克牌",
+  "criteria": [
+   "逐张发出五张，再把余牌放进牌托。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_empty_dustpan_into_bin",
+  "title": "把簸箕里的垃圾倒入桶",
+  "status": "not_started",
+  "goal": "把簸箕里的垃圾倒入桶",
+  "criteria": [
+   "拿起簸箕，将纸团倒进桶内。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_fold_towel",
+  "title": "对折桌上的方巾",
+  "status": "not_started",
+  "goal": "对折桌上的方巾",
+  "criteria": [
+   "连续对折两次，再放到一旁。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_hammer_nails",
+  "title": "依次锤下两枚钉子",
+  "status": "not_started",
+  "goal": "依次锤下两枚钉子",
+  "criteria": [
+   "依次敲下两枚钉子，再放回锤子。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_insert_knife_into_cutlery_bin",
+  "title": "将餐刀插入餐具筒",
+  "status": "not_started",
+  "goal": "将餐刀插入餐具筒",
+  "criteria": [
+   "将刀刃朝下放入筒内。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_iron_garment",
+  "title": "熨烫桌上的衣物",
+  "status": "not_started",
+  "goal": "熨烫桌上的衣物",
+  "criteria": [
+   "扶住衣物，用熨斗沿面往复移动。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_nest_cups",
+  "title": "依尺寸嵌套五只杯子",
+  "status": "not_started",
+  "goal": "依尺寸嵌套五只杯子",
+  "criteria": [
+   "按尺寸将四只杯子逐一嵌入底杯。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_organize_objects_in_drawer",
+  "title": "将三件物品收入抽屉",
+  "status": "not_started",
+  "goal": "将三件物品收入抽屉",
+  "criteria": [
+   "拉开抽屉，将三件物品放入后关好。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_place_ball_in_box",
+  "title": "将球放入盒中",
+  "status": "not_started",
+  "goal": "将球放入盒中",
+  "criteria": [
+   "拾球并放进盒内。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_place_ball_in_cup_then_cup_in_box",
+  "title": "先放球入杯，再放杯入盒",
+  "status": "not_started",
+  "goal": "先放球入杯，再放杯入盒",
+  "criteria": [
+   "将球放进杯子，再把装球的杯子放进盒内。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_place_books_on_shelf",
+  "title": "把两本书摆入书架",
+  "status": "not_started",
+  "goal": "把两本书摆入书架",
+  "criteria": [
+   "将两本目标书依次摆入架内。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_place_cup_on_plate",
+  "title": "将杯子放到盘子上",
+  "status": "not_started",
+  "goal": "将杯子放到盘子上",
+  "criteria": [
+   "将杯子直立放到盘面。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_place_fruits_in_basket",
+  "title": "将四个水果收入篮中",
+  "status": "not_started",
+  "goal": "将四个水果收入篮中",
+  "criteria": [
+   "逐个拾起四个水果并放入篮中。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_place_knife_and_fork_on_plate",
+  "title": "将刀叉摆入餐盘",
+  "status": "not_started",
+  "goal": "将刀叉摆入餐盘",
+  "criteria": [
+   "将刀叉分别拿起并放入餐盘。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_place_pens_in_holder",
+  "title": "将四支笔插入笔筒",
+  "status": "not_started",
+  "goal": "将四支笔插入笔筒",
+  "criteria": [
+   "顺次拿起四支笔，插入笔筒。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_play_tic_tac_toe",
+  "title": "将带孔棋子套上立柱",
+  "status": "not_started",
+  "goal": "将带孔棋子套上立柱",
+  "criteria": [
+   "将每块带孔棋子放上各自的立柱。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_relocate_tennis_ball",
+  "title": "把网球移到桌面另一侧",
+  "status": "not_started",
+  "goal": "把网球移到桌面另一侧",
+  "criteria": [
+   "将网球从左侧移到右侧。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_remove_block_from_box",
+  "title": "从盒内取出积木",
+  "status": "not_started",
+  "goal": "从盒内取出积木",
+  "criteria": [
+   "将木块取出，放到盒外桌面。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_reorient_and_relocate_carton",
+  "title": "翻正并移动纸箱",
+  "status": "not_started",
+  "goal": "翻正并移动纸箱",
+  "criteria": [
+   "将箱顶翻到上方，再把纸箱推向一侧。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_reorient_cup_upright",
+  "title": "扶正侧倒的杯子",
+  "status": "not_started",
+  "goal": "扶正侧倒的杯子",
+  "criteria": [
+   "将杯子扶正，以杯底支撑。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_reposition_and_stack_blocks",
+  "title": "移动并叠放两块积木",
+  "status": "not_started",
+  "goal": "移动并叠放两块积木",
+  "criteria": [
+   "将两个木块移到目标侧并上下叠放。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_rotate_bottle_cap",
+  "title": "旋下并放置瓶盖",
+  "status": "not_started",
+  "goal": "旋下并放置瓶盖",
+  "criteria": [
+   "稳定瓶身，旋开盖子，并将盖子放到一旁。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_scoop_salt_from_jar_into_cup",
+  "title": "从盐罐中舀盐入杯",
+  "status": "not_started",
+  "goal": "从盐罐中舀盐入杯",
+  "criteria": [
+   "用勺子将盐从罐中舀入空杯。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_scrub_cup_interior",
+  "title": "刷洗杯子内壁",
+  "status": "not_started",
+  "goal": "刷洗杯子内壁",
+  "criteria": [
+   "扶杯，将刷头送入杯口并刷洗内壁。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_seal_box_with_tape",
+  "title": "用胶带封箱",
+  "status": "not_started",
+  "goal": "用胶带封箱",
+  "criteria": [
+   "沿箱顶接缝贴上胶带，压平并切断。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_sort_utensils",
+  "title": "按种类分拣两勺两叉",
+  "status": "not_started",
+  "goal": "按种类分拣两勺两叉",
+  "criteria": [
+   "将勺放入左盒、叉放入右盒。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_stack_two_plates",
+  "title": "叠放两个餐盘",
+  "status": "not_started",
+  "goal": "叠放两个餐盘",
+  "criteria": [
+   "将一个盘子端起并与另一个对齐叠放。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_staple_paper",
+  "title": "用订书机装订 A4 纸",
+  "status": "not_started",
+  "goal": "用订书机装订 A4 纸",
+  "criteria": [
+   "将订书机移到纸边，装订后放回纸张。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_sweep_waste_into_dustpan",
+  "title": "把桌面垃圾扫入簸箕",
+  "status": "not_started",
+  "goal": "把桌面垃圾扫入簸箕",
+  "criteria": [
+   "用桌刷将全部纸团扫入簸箕。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_tighten_bottle_cap",
+  "title": "装上并拧紧瓶盖",
+  "status": "not_started",
+  "goal": "装上并拧紧瓶盖",
+  "criteria": [
+   "扶稳瓶身，装上瓶盖并拧紧。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_transfer_liquid_with_dropper",
+  "title": "用滴管转移液体",
+  "status": "not_started",
+  "goal": "用滴管转移液体",
+  "criteria": [
+   "用滴管吸取液体并在器皿间转移。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_transfer_salt_between_cups_with_spoon",
+  "title": "用勺把盐从右杯转移到左杯",
+  "status": "not_started",
+  "goal": "用勺把盐从右杯转移到左杯",
+  "criteria": [
+   "从右杯舀一勺盐，转移到左杯。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_turn_book_pages",
+  "title": "翻开两页书",
+  "status": "not_started",
+  "goal": "翻开两页书",
+  "criteria": [
+   "依次翻过两页。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "daily_tabletop_unscrew_bottle_cap",
+  "title": "拧下饮料瓶盖",
+  "status": "not_started",
+  "goal": "拧下饮料瓶盖",
+  "criteria": [
+   "稳定瓶身，旋开盖子，并将盖子放到一旁。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "fold_glasses",
+  "title": "双手折叠眼镜",
+  "status": "in_progress",
+  "goal": "把两侧镜腿折回并放稳",
+  "criteria": [],
+  "oracle": "revobench.tasks.fold_glasses.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "fold_phone",
+  "title": "展开折叠手机",
+  "status": "in_progress",
+  "goal": "展开至目标角度，再合上放下",
+  "criteria": [],
+  "oracle": "revobench.tasks.fold_phone.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "folder_store_pen",
+  "title": "文件夹收纳笔",
+  "status": "in_progress",
+  "goal": "放入笔并合上封面",
+  "criteria": [],
+  "oracle": "revobench.tasks.folder_store_pen.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "hammer",
+  "title": "锤子敲钉子",
+  "status": "accepted",
+  "goal": "Pick up the hammer and drive the nail into the board.",
+  "criteria": [
+   "抓住锤子，通过锤子与钉子的真实接触使钉子下移，检查手部没有直接推钉子并保留抓持"
+  ],
+  "oracle": "revobench.tasks.hammer.metrics:evaluate_hammer",
+  "gate": true,
+  "range": [
+   -0.01,
+   0.01
+  ],
+  "seed": 1,
+  "group": [
+   "hammer_pair_hammer",
+   "hammer_pair_nail_board"
+  ],
+  "offsetMm": [
+   0.236,
+   9.009
+  ]
+ },
+ {
+  "id": "insert_peg",
+  "title": "插杆",
+  "status": "accepted",
+  "goal": "Pick up the peg, insert it into the hole and release.",
+  "criteria": [
+   "插入深度超过 6 cm，孔内几何余量合格，销与夹具峰值接触力低于 15 N，同时限制手臂碰撞。松手后在至少 120 个控制帧内保持稳定，位置各轴变化小于 2 mm。当前脚本还读取参考控制器的完成标志与阶段名。"
+  ],
+  "oracle": "revobench.tasks.insert_peg.metrics:evaluate_peg",
+  "gate": true,
+  "range": [
+   -0.01,
+   0.01
+  ],
+  "seed": 1,
+  "group": [
+   "peg",
+   "hole"
+  ],
+  "offsetMm": [
+   0.236,
+   9.009
+  ]
+ },
+ {
+  "id": "insert_pen",
+  "title": "把笔插入笔筒",
+  "status": "accepted",
+  "goal": "笔进入笔筒并稳定留在其中",
+  "criteria": [],
+  "oracle": "revobench.tasks.insert_pen.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "insert_pipette",
+  "title": "插移液管",
+  "status": "accepted",
+  "goal": "Pick up the pipette, turn its tip downward, insert it into the glassware and hold it steadily.",
+  "criteria": [
+   "管尖朝下、对准开口并达到规定深度，保持三指接触；终态仍由手持管"
+  ],
+  "oracle": "revobench.tasks.insert_pipette.metrics:evaluate_pipette",
+  "gate": true,
+  "range": [
+   -0.01,
+   0.01
+  ],
+  "seed": 1,
+  "group": [
+   "pipette",
+   "glassware"
+  ],
+  "offsetMm": [
+   0.236,
+   9.009
+  ]
+ },
+ {
+  "id": "kettle_pour",
+  "title": "茶壶向杯中倾倒",
+  "status": "accepted",
+  "goal": "颗粒从壶内进入杯中，再放回茶壶",
+  "criteria": [],
+  "oracle": "revobench.tasks.kettle_pour.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "kitchen",
+  "title": "厨房食材转移",
+  "status": "accepted",
+  "goal": "Transfer the potato and two meat pieces from the pot to the bowl.",
+  "criteria": [
+   "三块食材分别被实际抓起、移入目标碗并释放稳定"
+  ],
+  "oracle": "revobench.tasks.kitchen.metrics:evaluate_transfer",
+  "gate": true,
+  "range": [
+   -0.01,
+   0.01
+  ],
+  "seed": 1,
+  "group": [
+   "cooking_pot",
+   "meat_chunk_0",
+   "meat_chunk_1",
+   "potato_chunk_0",
+   "empty_bowl"
+  ],
+  "offsetMm": [
+   0.236,
+   9.009
+  ]
+ },
+ {
+  "id": "lift_basket",
+  "title": "翻起提手搬篮筐",
+  "status": "in_progress",
+  "goal": "提起后移动到右侧目标区并放下",
+  "criteria": [],
+  "oracle": "revobench.tasks.lift_basket.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "lift_bucket",
+  "title": "翻起桶把并提桶",
+  "status": "in_progress",
+  "goal": "提起后移动到右侧目标区并放下",
+  "criteria": [],
+  "oracle": "revobench.tasks.lift_bucket.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "lift_carton",
+  "title": "双手搬纸箱",
+  "status": "accepted",
+  "goal": "双手承托纸箱，移动并放稳",
+  "criteria": [
+   "双手同时承托纸箱并抬高超过 8 cm 的记录至少 30 帧，箱体放入目标 2.5 cm 内，直立、双手释放并撤离，释放后观察至少 2 秒，位移漂移小于 3 mm、转角小于 0.04 rad。"
+  ],
+  "oracle": "revobench.tasks.lift_carton.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "lift_kettle_lid",
+  "title": "提壶盖再盖回",
+  "status": "accepted",
+  "goal": "沿滑动关节提盖后复位",
+  "criteria": [],
+  "oracle": "revobench.tasks.lift_kettle_lid.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "lift_pot_lid",
+  "title": "提锅盖再盖回",
+  "status": "in_progress",
+  "goal": "提起盖子再盖回",
+  "criteria": [],
+  "oracle": "revobench.tasks.lift_pot_lid.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "open_bench2dex_stapler",
+  "title": "订书机开合 · Bench2Dex",
+  "status": "not_started",
+  "goal": "Open and close the stapler along its original hinge.",
+  "criteria": [],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "open_laptop",
+  "title": "打开笔记本电脑",
+  "status": "in_progress",
+  "goal": "打开至目标角度后松手",
+  "criteria": [],
+  "oracle": "revobench.tasks.open_laptop.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "open_stapler",
+  "title": "打开并合上订书机",
+  "status": "accepted",
+  "goal": "沿铰链打开，再恢复闭合",
+  "criteria": [],
+  "oracle": "revobench.tasks.open_stapler.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "operate_scissors",
+  "title": "抓持剪刀开合",
+  "status": "not_started",
+  "goal": "完成开合后放回桌面",
+  "criteria": [],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "pack_groceries",
+  "title": "把日用品装入篮筐",
+  "status": "accepted",
+  "goal": "三件物品进入篮内且不穿透",
+  "criteria": [],
+  "oracle": "revobench.tasks.pack_groceries.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "pan_to_stove",
+  "title": "平底锅放到炉上",
+  "status": "accepted",
+  "goal": "平底锅放稳在指定炉圈",
+  "criteria": [],
+  "oracle": "revobench.tasks.pan_to_stove.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "plug_charger",
+  "title": "插充电器",
+  "status": "accepted",
+  "goal": "Pick up the charger, insert both prongs into the receptacle and release.",
+  "criteria": [
+   "插脚进入对应孔位，释放后深度保留且稳定，检查插入力和碰撞；不验证电气连接"
+  ],
+  "oracle": "revobench.tasks.plug_charger.metrics:evaluate_charger",
+  "gate": true,
+  "range": [
+   -0.01,
+   0.01
+  ],
+  "seed": 1,
+  "group": [
+   "charger",
+   "receptacle"
+  ],
+  "offsetMm": [
+   0.236,
+   9.009
+  ]
+ },
+ {
+  "id": "pour_can",
+  "title": "罐头向碗倾倒",
+  "status": "accepted",
+  "goal": "Pick up the can, pour the particles into the bowl and place the can down.",
+  "criteria": [
+   "开口罐内颗粒被倒入碗并落稳，罐体归位直立、释放稳定；使用颗粒替代物，不是液体仿真"
+  ],
+  "oracle": "revobench.tasks.pour_can.metrics:evaluate",
+  "gate": true,
+  "range": [
+   -0.01,
+   0.01
+  ],
+  "seed": 1,
+  "group": [
+   "can",
+   "bowl",
+   "64 个颗粒"
+  ],
+  "offsetMm": [
+   0.236,
+   9.009
+  ]
+ },
+ {
+  "id": "power_drill",
+  "title": "电钻",
+  "status": "accepted",
+  "goal": "Pick up the drill, align its chuck above the board without contact, then return it upright, release and withdraw.",
+  "criteria": [
+   "拿起电钻，将钻头非接触地对准板面上方，再直立归位、释放并撤手；不包含主轴旋转或钻孔"
+  ],
+  "oracle": "revobench.tasks.power_drill.metrics:evaluate_drill",
+  "gate": true,
+  "range": [
+   -0.01,
+   0.01
+  ],
+  "seed": 4,
+  "group": [
+   "power_drill",
+   "drill_board"
+  ],
+  "offsetMm": [
+   8.861,
+   0.227
+  ]
+ },
+ {
+  "id": "press_spring_button",
+  "title": "弹簧按钮按压",
+  "status": "not_started",
+  "goal": "Press the spring-loaded button and release it.",
+  "criteria": [],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_01_spatula_bread",
+  "title": "用锅铲铲起面包片",
+  "status": "not_started",
+  "goal": "用锅铲铲起面包片",
+  "criteria": [
+   "面包至少离桌 3 cm，运输阶段由锅铲支撑，手不能直接抓面包。",
+   "面包释放后位于餐盘内缘以内，并稳定 2 s。",
+   "锅铲退出后不压住面包；餐盘位移不超过 2 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_02_spoon_ball",
+  "title": "用勺子从碗中舀出高尔夫球",
+  "status": "not_started",
+  "goal": "用勺子从碗中舀出高尔夫球",
+  "criteria": [
+   "球离开碗的过程中始终由勺接触承托，不允许直接手抓。",
+   "搬运期间球不得提前掉回碗或掉到桌面。",
+   "球最终留在餐盘内并静止 2 s；碗位移不超过 2 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_03_pliers_nut",
+  "title": "用钳子夹取螺母",
+  "status": "not_started",
+  "goal": "用钳子夹取螺母",
+  "criteria": [
+   "螺母离桌至少 3 cm，搬运阶段仅通过钳口夹持。",
+   "钳子开合在原 URDF joint_0 的 0–30° 范围内。",
+   "螺母释放后留在木盒内，且没有黏附、穿透或持续滑脱。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_04_brush_dustpan",
+  "title": "刷子配合小铲收集滚动物",
+  "status": "not_started",
+  "goal": "刷子配合小铲收集滚动物",
+  "criteria": [
+   "三个球全部进入铲内，不能用手直接捡球。",
+   "装载后小铲离桌至少 3 cm 并保持 2 s，无球掉出。",
+   "刷子通过刷头接触推动，不能用隐藏约束吸住球。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_05_erase_board",
+  "title": "擦拭小黑板指定区域",
+  "status": "not_started",
+  "goal": "擦拭小黑板指定区域",
+  "criteria": [
+   "基于实际接触足迹，目标区域覆盖率至少 90%。",
+   "擦拭阶段板擦面与板面夹角不超过 15°，有效接触时间占比至少 90%。",
+   "板面位移不超过 2 cm，板擦不得穿入板面。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_06_lever_book",
+  "title": "用螺丝刀撬起书的一侧",
+  "status": "not_started",
+  "goal": "用螺丝刀撬起书的一侧",
+  "criteria": [
+   "书边通过工具杠杆动作上升至少 2 cm，接手前不得直接抓书抬起。",
+   "撬动时刀头保持在书下，无穿透。",
+   "接手和工具退出连续衔接；书最终平放并稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_07_turn_bread",
+  "title": "用叉和铲配合翻面",
+  "status": "not_started",
+  "goal": "用叉和铲配合翻面",
+  "criteria": [
+   "面包目标法向翻转 180°±15°。",
+   "面包全过程未离开两工具及餐盘构成的支撑范围，最终落在盘内。",
+   "手不能直接抓面包，也不能把刺穿或黏附当成夹持。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_08_balance_spoon",
+  "title": "托着草莓平稳移动勺子",
+  "status": "not_started",
+  "goal": "托着草莓平稳移动勺子",
+  "criteria": [
+   "承托阶段勺与草莓离桌至少 4 cm，累计水平移动不少于 50 cm。",
+   "草莓全程没有离开勺面掉落，另一只手不能扶住草莓。",
+   "最终草莓回到盘内，勺子安全退出。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_09_wipe_bottle",
+  "title": "扶住饮料瓶擦拭瓶身",
+  "status": "not_started",
+  "goal": "扶住饮料瓶擦拭瓶身",
+  "criteria": [
+   "三个区域各有至少 80% 面积被有效接触覆盖。",
+   "擦拭时瓶底保持桌面支撑，不得倾倒或滑出 3 cm。",
+   "海绵不能穿透瓶体，结束时两只手都离开瓶子。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_100_balanced_tray_exchange",
+  "title": "扶稳托盘同时交换两侧载荷",
+  "status": "not_started",
+  "goal": "扶稳托盘同时交换两侧载荷",
+  "criteria": [
+   "至少一只手在交换期间持续稳住离桌的托盘，盘面倾角小于 10°。",
+   "两罐最终分别到达对侧初始区域，误差小于 2 cm。",
+   "非操作中的载荷相对滑移不超过 2 cm，无掉落。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_10_brush_keyboard",
+  "title": "沿键盘行列刷扫",
+  "status": "not_started",
+  "goal": "沿键盘行列刷扫",
+  "criteria": [
+   "五条指定路径均完成，接触路径投影距各目标中心线不超过 8 mm。",
+   "刷头始终在键盘表面外侧，不得穿过键帽。",
+   "键盘位移不超过 2 cm，不能靠推动整块键盘完成路径。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_11_dock_phone",
+  "title": "将手机斜放到支架",
+  "status": "not_started",
+  "goal": "将手机斜放到支架",
+  "criteria": [
+   "手机同时受托槽和背板支撑，释放后稳定 2 s。",
+   "屏幕朝向指定观察方向，方向误差不超过 10°。",
+   "支架位移不超过 2 cm，手机不能通过穿透背板固定。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_12_aim_camera",
+  "title": "拿起相机对准奖杯",
+  "status": "not_started",
+  "goal": "拿起相机对准奖杯",
+  "criteria": [
+   "镜头光轴与目标方向夹角不超过 5°，距离保持在 20–40 cm。",
+   "保持阶段相机位移不超过 1 cm、角度变化不超过 3°。",
+   "手部不能完全遮挡镜头正前方的目标方向。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_13_aim_lamp",
+  "title": "调整台灯照向笔记本",
+  "status": "not_started",
+  "goal": "调整台灯照向笔记本",
+  "criteria": [
+   "灯头局部照射轴与目标方向误差不超过 8°。",
+   "灯座位移不超过 2 cm，所有关节保持在源 URDF 限位内。",
+   "释放后保持目标方向 2 s，灯臂不得靠穿透支撑。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_14_lift_keyboard_retrieve",
+  "title": "抬起键盘取出被挡住的鼠标",
+  "status": "not_started",
+  "goal": "抬起键盘取出被挡住的鼠标",
+  "criteria": [
+   "鼠标经开口取出，不能穿过键盘或笔记本。",
+   "键盘在鼠标经过时与其保持至少 5 mm 净空。",
+   "鼠标位于目标区域中心 2 cm 内；键盘恢复到初始位置 2 cm 内。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_15_remote_regrasp",
+  "title": "遥控器在手中换向",
+  "status": "not_started",
+  "goal": "遥控器在手中换向",
+  "criteria": [
+   "换向期间遥控器距桌面至少 3 cm，不允许借桌面翻转。",
+   "按键面法向朝上误差不超过 15°，发射端朝向音箱误差不超过 10°。",
+   "过程中不能用未接触物体的关节指令直接改变物体姿态。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_16_extract_brushpen",
+  "title": "抽出书下的毛笔",
+  "status": "not_started",
+  "goal": "抽出书下的毛笔",
+  "criteria": [
+   "毛笔沿可用缝隙完整抽出，不穿过书。",
+   "书水平位移不超过 2 cm，抬起高度不超过 3 cm。",
+   "毛笔最终与书分离至少 2 cm，笔尖未被手或书压住。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_17_invert_hourglass",
+  "title": "翻转沙漏并稳放",
+  "status": "not_started",
+  "goal": "翻转沙漏并稳放",
+  "criteria": [
+   "A 端最终朝下，姿态翻转 180°±10°。",
+   "底部中心距杯垫中心不超过 1.5 cm。",
+   "释放后保持直立 2 s，无撞击弹跳或倾倒。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_18_orient_die",
+  "title": "把骰子的指定点数转到上面",
+  "status": "not_started",
+  "goal": "把骰子的指定点数转到上面",
+  "criteria": [
+   "六点面法向与竖直方向误差不超过 8°。",
+   "骰子中心距离目标点不超过 1 cm。",
+   "释放后保持指定面朝上 2 s，不能修改骰子贴图实现目标。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_19_align_shoes",
+  "title": "把侧倒的两只鞋扶正并排齐",
+  "status": "not_started",
+  "goal": "把侧倒的两只鞋扶正并排齐",
+  "criteria": [
+   "两只鞋均由鞋底支撑，鞋底法向误差不超过 10°。",
+   "两鞋长轴夹角不超过 5°，鞋跟前后差不超过 1 cm。",
+   "鞋之间保持 2–4 cm 间距，释放后稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_20_helmet_catch",
+  "title": "用倒置安全帽接住球",
+  "status": "not_started",
+  "goal": "用倒置安全帽接住球",
+  "criteria": [
+   "球必须经过实际自由落体进入帽内，不能直接放到帽底或重置。",
+   "球接住后持续留在帽内，帽子放桌后稳定 2 s。",
+   "接球全过程安全帽由手控制，没有隐藏固定或穿透内壁。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_21_separate_nested_cups",
+  "title": "分离嵌套的两只杯子",
+  "status": "not_started",
+  "goal": "分离嵌套的两只杯子",
+  "criteria": [
+   "内杯通过杯口完整取出，杯壁无穿透。",
+   "外杯提起高度不超过 2 cm，水平位移不超过 2 cm。",
+   "两杯最终分离至少 5 cm，开口朝上并各自稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_22_middle_plate",
+  "title": "从三只盘子中取出中间一只",
+  "status": "not_started",
+  "goal": "从三只盘子中取出中间一只",
+  "criteria": [
+   "最终单独取出的实例必须是初始中间盘。",
+   "顶部盘和底盘恢复两盘叠放，中心偏差不超过 1.5 cm。",
+   "所有盘释放后稳定 2 s，不能穿过相邻盘取物。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_23_join_jigsaw",
+  "title": "旋转拼图片并接合",
+  "status": "not_started",
+  "goal": "旋转拼图片并接合",
+  "criteria": [
+   "指定配合边的对应点平均距离不超过 3 mm。",
+   "拼图片表面共面误差不超过 3 mm，不能靠互相穿透实现边界重合。",
+   "松手后接合布局保持 2 s；没有实际卡扣时不要求悬空拉住。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_24_pack_tetris",
+  "title": "把四种异形拼块放入框架",
+  "status": "not_started",
+  "goal": "把四种异形拼块放入框架",
+  "criteria": [
+   "四块均位于框架有效内边界中，且各实例对应目标格位。",
+   "每块平移误差不超过 3 mm、平面内角度误差不超过 5°。",
+   "没有拼块互相穿透或叠在另一块上，松手后稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_25_thread_nut",
+  "title": "双手把螺母旋到螺栓上",
+  "status": "not_started",
+  "goal": "双手把螺母旋到螺栓上",
+  "criteria": [
+   "螺母相对螺栓转过至少 360°。",
+   "轴向前进量与源螺距一致，误差不超过 20%。",
+   "放开螺母后保持真实螺纹接触，不允许焊接、吸附或直接修改相对位姿。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_26_sort_fasteners",
+  "title": "按结构分拣混合紧固件",
+  "status": "not_started",
+  "goal": "按结构分拣混合紧固件",
+  "criteria": [
+   "四个实例全部分类正确：两种带杆件入木盒，两种螺母入塑料盒。",
+   "每次只搬运一个目标，其他未操作件位移不超过 2 cm。",
+   "所有零件释放后留在对应容器内并稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_27_reindex_tubes",
+  "title": "在试管架上交换试管位置",
+  "status": "not_started",
+  "goal": "在试管架上交换试管位置",
+  "criteria": [
+   "两根指定实例完成孔位交换，第三根留在原孔。",
+   "每根试管必须先完全离开原孔，再横向移动。",
+   "最终试管由架孔正确支撑，倾角不超过 10°；架子位移不超过 2 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_28_extract_l_piece",
+  "title": "转动 L 形拼块穿过窄缝",
+  "status": "not_started",
+  "goal": "转动 L 形拼块穿过窄缝",
+  "criteria": [
+   "拼块完整通过通道，且移动阶段最低点离桌不超过 3 cm，不能直接越过障碍物。",
+   "书和茶叶盒位移均不超过 1 cm。",
+   "拼块与障碍无明显穿透，最终放在前方目标区内。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_29_reveal_ball",
+  "title": "移开遮挡找到指定球",
+  "status": "not_started",
+  "goal": "移开遮挡找到指定球",
+  "criteria": [
+   "选择的必须是高尔夫球实例，不能拿另外两种球替代。",
+   "抓球前确实通过移动遮挡物暴露目标；不借助物体 ID 直接绕过观察过程作为 policy 输入。",
+   "目标球位置误差不超过 2 cm，另外两球位移不超过 2 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_30_medicine_box",
+  "title": "开盒取药，再把盒盖关回",
+  "status": "not_started",
+  "goal": "开盒取药，再把盒盖关回",
+  "criteria": [
+   "开盖时保留原 URDF 铰链，关节不越限。",
+   "药瓶取出过程中不穿过盖子或侧壁，最终位于盒外。",
+   "盒盖回到关闭参考角 ±5°，盒体位移不超过 2 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_31_bottom_book",
+  "title": "扶住上层物品抽出底部书本",
+  "status": "not_started",
+  "goal": "扶住上层物品抽出底部书本",
+  "criteria": [
+   "底书完整抽出，闹钟未倾倒或滑出笔记本。",
+   "闹钟在操作中相对笔记本平移不超过 2 cm、倾角不超过 15°。",
+   "最终三件物品均由真实支撑承载，并稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_32_remove_coaster",
+  "title": "移走高脚杯底下的杯垫",
+  "status": "not_started",
+  "goal": "移走高脚杯底下的杯垫",
+  "criteria": [
+   "杯垫与杯底完全分离。",
+   "杯子倾角不超过 10°，杯底上升不超过 3 cm，水平位移不超过 2 cm。",
+   "杯子在桌面上释放并稳定 2 s，无倾倒。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_33_battery_gap",
+  "title": "捏取狭缝中的电池",
+  "status": "not_started",
+  "goal": "捏取狭缝中的电池",
+  "criteria": [
+   "电池完整取出并离开缝隙，不能先把两个盒子推开。",
+   "两盒位移均不超过 1 cm。",
+   "电池最终中心距目标点不超过 1 cm，使用指腹而非指背夹持。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_34_baguette_passage",
+  "title": "转动法棍通过瓶罐间隙",
+  "status": "not_started",
+  "goal": "转动法棍通过瓶罐间隙",
+  "criteria": [
+   "法棍完整从两障碍物之间通过，运输时最低点离桌不超过 5 cm。",
+   "油瓶和薯片筒不能倾倒，平移均不超过 1 cm。",
+   "法棍最终长轴与目标方向误差不超过 10°。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_35_compact_food_pack",
+  "title": "把三种食品盒紧凑装入木盒",
+  "status": "not_started",
+  "goal": "把三种食品盒紧凑装入木盒",
+  "criteria": [
+   "三物体均完整位于木盒内腔，不得高于预设盒口限制。",
+   "物体间无重叠穿透；各中心距目标占位不超过 1.5 cm。",
+   "所有包装正面朝向符合给定方向，角度误差不超过 15°。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_36_occluded_snack",
+  "title": "清出遮挡后取出指定零食",
+  "status": "not_started",
+  "goal": "清出遮挡后取出指定零食",
+  "criteria": [
+   "取出的实例是薯条盒，不能用汉堡或饼干盒代替。",
+   "纸巾盒最终位置误差不超过 2 cm、朝向误差不超过 10°。",
+   "饼干盒和汉堡保持原位，位移不超过 2 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_37_bimanual_swap",
+  "title": "双手同时交换茶叶盒和咖啡盒",
+  "status": "not_started",
+  "goal": "双手同时交换茶叶盒和咖啡盒",
+  "criteria": [
+   "两盒交换位置，中心误差各不超过 2 cm。",
+   "从首次同时离桌到进入目标区域期间，两盒均不能中途放桌。",
+   "两手和两物体没有互撞，包装最终均直立稳定。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_38_two_bottles_one_grasp",
+  "title": "一只手同时握住两只小瓶",
+  "status": "not_started",
+  "goal": "一只手同时握住两只小瓶",
+  "criteria": [
+   "同一只手同时搬运两个独立刚体，离桌至少 3 cm，水平移动至少 20 cm。",
+   "搬运阶段另一只手不能托底，也不能把两瓶绑定成一个物体。",
+   "两瓶最终直立在盘内，各自稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_39_handoff_dumbbell",
+  "title": "双手交接哑铃",
+  "status": "not_started",
+  "goal": "双手交接哑铃",
+  "criteria": [
+   "明确发生右手持有→双手接触→左手持有的顺序。",
+   "交接期间哑铃离桌至少 5 cm，不能落桌后换手。",
+   "右手释放后的下落不超过 1 cm，最终水平放稳。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_40_hat_brim",
+  "title": "从帽檐换握到帽体并翻正",
+  "status": "not_started",
+  "goal": "从帽檐换握到帽体并翻正",
+  "criteria": [
+   "发生帽檐抓取到帽体支撑的换握，过程帽子不落桌。",
+   "最终帽口朝下、帽檐朝前，角度误差各不超过 15°。",
+   "帽子放稳后与笔记本不重叠。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_41_table_bowling",
+  "title": "用网球撞倒指定瓶子",
+  "status": "not_started",
+  "goal": "用网球撞倒指定瓶子",
+  "criteria": [
+   "网球滚动至少 20 cm 后才接触目标瓶，不能手拿球直接敲瓶。",
+   "指定瓶倾角达到 60°以上；后排两瓶倾角不超过 15°。",
+   "球与所有道具留在桌面边界内，不通过改动质量或初态重置制造结果。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_42_toycar_slalom",
+  "title": "抓控小车穿过桌面障碍",
+  "status": "not_started",
+  "goal": "抓控小车穿过桌面障碍",
+  "criteria": [
+   "小车整体依次通过两个通道，不能抬高越过障碍。",
+   "车辆最低点离桌不超过 5 mm，三个障碍位移均不超过 1 cm。",
+   "最终中心距停车点不超过 2 cm，车头朝向误差不超过 10°。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_43_roll_and_catch",
+  "title": "双手配合滚出并接住棒球",
+  "status": "not_started",
+  "goal": "双手配合滚出并接住棒球",
+  "criteria": [
+   "球脱离右手后独立滚动至少 15 cm。",
+   "左手在球到达目标区域时接触减速，球不能越过接球区 5 cm 以上。",
+   "接球不能通过瞬移、固定球或提前用另一道具阻挡实现。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_44_cover_soap",
+  "title": "倒扣塑料盒罩住香皂",
+  "status": "not_started",
+  "goal": "倒扣塑料盒罩住香皂",
+  "criteria": [
+   "香皂完整位于盒的内腔范围，盒口平面落在桌面。",
+   "香皂位移不超过 1 cm，不能被盒壁推走。",
+   "盒子释放后稳定 2 s，香皂与盒体无穿透。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_45_bridge_brushpen",
+  "title": "让毛笔横搭在两只包装盒上",
+  "status": "not_started",
+  "goal": "让毛笔横搭在两只包装盒上",
+  "criteria": [
+   "毛笔同时与两个包装盒形成支撑，中段不接触桌面。",
+   "两个支撑点均落在笔杆而非柔软笔尖区域。",
+   "松手后保持 2 s，不滑落；两盒位移不超过 1 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_46_sleeve_paper_roll",
+  "title": "把纸卷套到细瓶外面",
+  "status": "not_started",
+  "goal": "把纸卷套到细瓶外面",
+  "criteria": [
+   "瓶子从纸卷中心孔穿过，而不是从纸卷外侧擦过。",
+   "纸卷下表面落桌，瓶体保持直立，位移不超过 1 cm。",
+   "内孔与瓶子无穿透，松手后两者稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_47_extract_baguette",
+  "title": "稳住篮筐抽出长法棍",
+  "status": "not_started",
+  "goal": "稳住篮筐抽出长法棍",
+  "criteria": [
+   "法棍完整取出，不穿过篮边或其他食品。",
+   "篮筐位移不超过 2 cm，苹果和梨保持在篮内。",
+   "法棍最终放稳，未操作的水果相对篮筐位移均不超过 3 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_48_invert_stemglass",
+  "title": "握住杯梗把高脚杯倒扣",
+  "status": "not_started",
+  "goal": "握住杯梗把高脚杯倒扣",
+  "criteria": [
+   "最终杯口朝下，轴线与竖直夹角不超过 8°。",
+   "杯口中心距杯垫中心不超过 1 cm，环形杯口真实支撑在杯垫上。",
+   "释放后稳定 2 s，不能通过杯沿穿透杯垫得到稳定。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_49_microphone_scan",
+  "title": "持麦克风沿音箱三侧巡检",
+  "status": "not_started",
+  "goal": "持麦克风沿音箱三侧巡检",
+  "criteria": [
+   "三个方向的目标位姿均到达，位置误差不超过 2 cm。",
+   "移动阶段收音端指向音箱的角度误差不超过 10°，距离保持在 12–18 cm。",
+   "除必要端点外不出现超过 0.5 s 的无意义停顿；音箱位移不超过 1 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_50_stamp_notebook",
+  "title": "在笔记本指定位置盖印",
+  "status": "not_started",
+  "goal": "在笔记本指定位置盖印",
+  "criteria": [
+   "两次印面中心距目标不超过 5 mm，平面内朝向误差不超过 10°。",
+   "每次有效接触持续 0.3–0.8 s，接触期间横向滑移不超过 2 mm。",
+   "笔记本位移不超过 1 cm；两次接触之间印面完全离开封面。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_51_wrench_nut_turn",
+  "title": "用扳手端部拨转螺母",
+  "status": "not_started",
+  "goal": "用扳手端部拨转螺母",
+  "criteria": [
+   "螺母绕桌面法向转动 90°±10°，中心平移不超过 3 cm。",
+   "主要接触来自扳手端部外表面，手不直接拨动螺母。",
+   "工具退出后螺母静止 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_52_two_tools_apple",
+  "title": "锅铲和勺子协作托住苹果",
+  "status": "not_started",
+  "goal": "锅铲和勺子协作托住苹果",
+  "criteria": [
+   "苹果离桌至少 3 cm，转移至少 15 cm。",
+   "运输时由两件工具共同约束，手不接触苹果。",
+   "苹果留在盘内稳定 2 s，两工具均撤离。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_53_fork_mug_drag",
+  "title": "用叉柄穿过杯把牵引杯子",
+  "status": "not_started",
+  "goal": "用叉柄穿过杯把牵引杯子",
+  "criteria": [
+   "杯子平移 12–18 cm，倾角始终小于 15°。",
+   "牵引阶段只允许叉柄内穿杯把接触，不能直接抓杯。",
+   "杯把无穿透，杯子释放后稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_54_marker_zigzag",
+  "title": "持记号笔沿笔记本折线路径移动",
+  "status": "not_started",
+  "goal": "持记号笔沿笔记本折线路径移动",
+  "criteria": [
+   "笔端按顺序经过四个目标点，每点误差小于 5 mm。",
+   "段内笔端到表面距离在 0–3 mm，不能穿透纸面。",
+   "折线转角处连续减速，笔记本位移不超过 2 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_55_roller_sponge",
+  "title": "双手用擀面杖沿海绵往返滚动",
+  "status": "not_started",
+  "goal": "双手用擀面杖沿海绵往返滚动",
+  "criteria": [
+   "接触覆盖海绵长度至少 80%，往返各一次，擀面杖绕自身长轴转动。",
+   "接触使用擀面杖曲面，海绵平移不超过 2 cm。",
+   "曲面不穿透海绵；不能只平移而不转动。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_56_spoon_bowl_wall",
+  "title": "勺子沿碗内壁绕一圈",
+  "status": "not_started",
+  "goal": "勺子沿碗内壁绕一圈",
+  "criteria": [
+   "接触点绕碗轴累计至少 330°。",
+   "勺面与碗内壁保持非穿透接触，不能从碗外绕过。",
+   "碗位移不超过 2 cm，勺子顺利退出。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_57_brush_shoe_sole",
+  "title": "翻起鞋子后刷扫鞋底",
+  "status": "not_started",
+  "goal": "翻起鞋子后刷扫鞋底",
+  "criteria": [
+   "刷毛接触覆盖鞋底长度至少 70%。",
+   "三次刷扫期间鞋子由另一手持续支撑。",
+   "鞋底最终朝桌面，鞋与工具均稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_58_wipe_plate_faces",
+  "title": "持盘擦拭正反两面",
+  "status": "not_started",
+  "goal": "持盘擦拭正反两面",
+  "criteria": [
+   "内面和外底面分别覆盖预先定义的三个接触区。",
+   "翻面时盘子全程有真实手部支撑。",
+   "盘子不撞桌，最终正放并稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_59_knife_can_edge",
+  "title": "用餐刀辅助捏起薄罐头",
+  "status": "not_started",
+  "goal": "用餐刀辅助捏起薄罐头",
+  "criteria": [
+   "先由工具抬起罐体一侧至少 8 mm，再由手接管。",
+   "手接管前刀具不能穿透罐底；不能切割罐体。",
+   "罐头移开至少 12 cm，放稳 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_60_driver_key_targets",
+  "title": "用螺丝刀柄端依次触碰计算器按键",
+  "status": "not_started",
+  "goal": "用螺丝刀柄端依次触碰计算器按键",
+  "criteria": [
+   "柄端按序进入三个按键中心半径 4 mm 范围。",
+   "每次触碰持续 0.1–0.5 s，间隔有可观测离面。",
+   "计算器位移小于 1 cm；不要求数字显示或电子功能变化。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_61_plate_orange_chute",
+  "title": "倾斜餐盘让橙子滚入碗",
+  "status": "not_started",
+  "goal": "倾斜餐盘让橙子滚入碗",
+  "criteria": [
+   "橙子通过重力及盘面接触进入碗，手不直接接触橙子。",
+   "滚落高度小于 5 cm，盘子不击打碗沿。",
+   "橙子留在碗内稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_62_loaded_tray_curve",
+  "title": "端着杯与罐头绕过高瓶",
+  "status": "not_started",
+  "goal": "端着杯与罐头绕过高瓶",
+  "criteria": [
+   "托盘移动至少 25 cm，与瓶子保持至少 2 cm 几何间隙。",
+   "杯和罐头始终受托盘支撑，相对滑移各不超过 2 cm。",
+   "高瓶位移小于 1 cm，载荷不倾倒。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_63_ball_plate_level",
+  "title": "端盘移动时让球留在中央",
+  "status": "not_started",
+  "goal": "端盘移动时让球留在中央",
+  "criteria": [
+   "盘子离桌至少 4 cm、平移至少 20 cm。",
+   "球与盘中心距离不超过盘有效半径的 50%。",
+   "手不能按住球，放下后球稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_64_pitcher_gate",
+  "title": "转动量壶通过两盒之间",
+  "status": "not_started",
+  "goal": "转动量壶通过两盒之间",
+  "criteria": [
+   "完整壶体含把手从两盒之间通过，最低点离桌不高于 8 cm。",
+   "途中与盒子无接触，盒子位移小于 1 cm。",
+   "量壶最终直立，壶嘴朝向误差小于 10°。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_65_book_ramp_ball",
+  "title": "搭出书本斜坡让球滚入托盘",
+  "status": "not_started",
+  "goal": "搭出书本斜坡让球滚入托盘",
+  "criteria": [
+   "书本形成 10°–35°斜坡，两个支撑接触真实。",
+   "球释放后靠重力滚过书面并进入托盘，手不再推球。",
+   "搭建物不塌落，球留在托盘内 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_66_build_car_bridge",
+  "title": "用书和罐头搭桥让小车穿过",
+  "status": "not_started",
+  "goal": "用书和罐头搭桥让小车穿过",
+  "criteria": [
+   "桥下净空大于小车外形，书本同时支撑在两罐上。",
+   "小车完整从桥下穿过，未推倒支撑罐。",
+   "撤手后桥保持 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_67_insert_coaster_mug",
+  "title": "抬杯后把杯垫送到杯底",
+  "status": "not_started",
+  "goal": "抬杯后把杯垫送到杯底",
+  "criteria": [
+   "杯子抬起高度为 2–6 cm，杯垫不撞杯底。",
+   "杯底投影完全落在杯垫有效支撑范围内。",
+   "双手释放后杯子直立稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_68_invert_bowl_plate",
+  "title": "用盘盖住碗后夹持翻转",
+  "status": "not_started",
+  "goal": "用盘盖住碗后夹持翻转",
+  "criteria": [
+   "翻转期间球一直被盘碗围住，没有逃逸。",
+   "盘和碗始终有真实接触与手部夹持，不能绑定成一体。",
+   "移走碗后球留在盘内并稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_69_clamp_bread_plates",
+  "title": "用两只盘子夹住面包搬运",
+  "status": "not_started",
+  "goal": "用两只盘子夹住面包搬运",
+  "criteria": [
+   "面包离桌至少 3 cm、平移至少 15 cm。",
+   "手不直接触碰面包，支撑来自两盘的真实摩擦接触。",
+   "面包无穿透，释放后两盘分离至少 5 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_70_spoon_rest_mug",
+  "title": "把勺子横搭在杯口",
+  "status": "not_started",
+  "goal": "把勺子横搭在杯口",
+  "criteria": [
+   "勺子跨过杯口且接触杯沿至少两处。",
+   "勺子未掉入杯中，杯子未倾倒。",
+   "双手离开 3 cm 后保持 3 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_71_meter_dice_cup",
+  "title": "从杯中逐个倒出三颗骰子",
+  "status": "not_started",
+  "goal": "从杯中逐个倒出三颗骰子",
+  "criteria": [
+   "三次出杯事件各只有一颗骰子，事件间隔至少 0.3 s。",
+   "三颗都留在盘内，无手指伸进杯中取物。",
+   "杯子最终直立，骰子静止 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_72_cup_to_cup_ball",
+  "title": "双手在两只杯间转移球",
+  "status": "not_started",
+  "goal": "双手在两只杯间转移球",
+  "criteria": [
+   "球从左杯进入右杯，全程不接触手和桌面。",
+   "接收时两杯口最短距离小于 3 cm，不能用杯体穿透传球。",
+   "两杯放稳，球留在右杯 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_73_thread_marker_handle",
+  "title": "把毛笔穿过杯把",
+  "status": "not_started",
+  "goal": "把毛笔穿过杯把",
+  "criteria": [
+   "笔穿过杯把孔并在另一侧露出至少 2 cm。",
+   "穿入和抽出均沿真实孔道，无穿透杯把。",
+   "杯子中心位移小于 2 cm。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_74_scale_single_fruit",
+  "title": "逐件把水果放到秤面再取下",
+  "status": "not_started",
+  "goal": "逐件把水果放到秤面再取下",
+  "criteria": [
+   "秤面同时最多只有一件水果，每件独立停稳至少 1 s。",
+   "果体完全由秤面支撑，不能仍握在手里假称放置完成。",
+   "顺序正确，秤不移动超过 1 cm；不要求电子读数。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_75_can_pyramid",
+  "title": "把三只罐头搭成小拱堆",
+  "status": "not_started",
+  "goal": "把三只罐头搭成小拱堆",
+  "criteria": [
+   "上罐同时接触两只下罐，轴线夹角各小于 10°。",
+   "上罐离桌，三罐没有隐藏固定或穿透。",
+   "完全松手后结构保持 3 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_76_utensil_safe_handover",
+  "title": "把餐刀调整成刀柄朝向接收手",
+  "status": "not_started",
+  "goal": "把餐刀调整成刀柄朝向接收手",
+  "criteria": [
+   "交接期间至少一只手持续握持刀柄。",
+   "任何手指都不能把刀刃作为主握持面。",
+   "刀进入托盘，刀尖朝向托盘内部并稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_77_separate_food_cleaners",
+  "title": "把食品与清洁用品分区摆开",
+  "status": "not_started",
+  "goal": "把食品与清洁用品分区摆开",
+  "criteria": [
+   "食品中心 x 小于 -0.12 m，清洁用品中心 x 大于 0.12 m。",
+   "两组完整物体表面距离至少 10 cm。",
+   "所有物体直立且不互相支撑，稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_78_breakfast_tray",
+  "title": "按餐具关系摆一份早餐托盘",
+  "status": "not_started",
+  "goal": "按餐具关系摆一份早餐托盘",
+  "criteria": [
+   "三件完整落在托盘内，不互相接触。",
+   "杯把朝外误差小于 15°，勺柄朝前误差小于 15°。",
+   "杯和香蕉之间有至少 1 cm 间隙，释放后稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_79_bowl_scale_center",
+  "title": "把碗居中放上电子秤",
+  "status": "not_started",
+  "goal": "把碗居中放上电子秤",
+  "criteria": [
+   "碗底中心距秤面中心小于 8 mm，碗底在有效支撑区内。",
+   "勺子不搭在秤或碗上，最近间隙至少 1 cm。",
+   "碗只受秤面支撑并稳定 2 s，不要求去皮或读数。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_80_fan_tools",
+  "title": "把三件长工具摆成可抓取扇形",
+  "status": "not_started",
+  "goal": "把三件长工具摆成可抓取扇形",
+  "criteria": [
+   "轴向相对各自目标误差小于 10°，工作端方向正确。",
+   "工具网格互不相交，握持区两两间距至少 3 cm。",
+   "三件均由桌面支撑且稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_81_park_car_tray",
+  "title": "让小车倒退进入托盘停车位",
+  "status": "not_started",
+  "goal": "让小车倒退进入托盘停车位",
+  "criteria": [
+   "小车以车尾先进入，完整停在托盘内。",
+   "入位过程中不接触两侧包装盒。",
+   "车轮落底，最终航向误差小于 10°并稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_82_ramp_car_tray",
+  "title": "铺好书本坡道再让小车上托盘",
+  "status": "not_started",
+  "goal": "铺好书本坡道再让小车上托盘",
+  "criteria": [
+   "车轮沿坡面连续经过，不允许抬车越过坡道。",
+   "书本没有滑脱，车身未穿过盘沿。",
+   "小车停在盘内，书本最终回到桌面。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_83_right_pitcher",
+  "title": "扶正侧倒的带柄量壶",
+  "status": "not_started",
+  "goal": "扶正侧倒的带柄量壶",
+  "criteria": [
+   "翻正过程中壶嘴不刮桌，壶把无穿透。",
+   "壶轴相对竖直误差小于 5°，杯垫位移小于 1 cm。",
+   "放下后稳定 2 s，双手回位。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_84_aim_wateringcan",
+  "title": "让浇水壶嘴依次对准两个杯口",
+  "status": "not_started",
+  "goal": "让浇水壶嘴依次对准两个杯口",
+  "criteria": [
+   "壶嘴投影依次进入两杯口中心 1 cm 范围。",
+   "嘴端距杯口高度 2–5 cm，壶体不碰杯。",
+   "顺序正确，每处保持 0.5 s；不宣称实际出水。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_85_inspect_can_label",
+  "title": "转动罐头让标签依次朝向两个观察方向",
+  "status": "not_started",
+  "goal": "转动罐头让标签依次朝向两个观察方向",
+  "criteria": [
+   "两阶段标签法向与各自视线夹角均小于 15°，保持各 0.5 s。",
+   "标签面不能被手完全遮挡。",
+   "罐头直立放稳 2 s，不能只移动相机代替转罐。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_86_fruit_size_order",
+  "title": "按最长尺寸排列三种水果",
+  "status": "not_started",
+  "goal": "按最长尺寸排列三种水果",
+  "criteria": [
+   "排序依据固定缩放后的网格尺寸，不凭类别猜测。",
+   "三个物体中心到同一 y 线距离小于 1 cm。",
+   "相邻完整网格间距 2–4 cm，稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_87_banana_cup_curve",
+  "title": "把草莓放在香蕉弯曲内侧",
+  "status": "not_started",
+  "goal": "把草莓放在香蕉弯曲内侧",
+  "criteria": [
+   "草莓中心落在香蕉两端连线与内弧围成的凹侧区域。",
+   "香蕉与草莓至少留 3 mm 间隙，二者不互相支撑。",
+   "香蕉落桌并稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_88_edge_plate_retrieve",
+  "title": "利用桌边露出的盘沿抓起餐盘",
+  "status": "not_started",
+  "goal": "利用桌边露出的盘沿抓起餐盘",
+  "criteria": [
+   "对捏前盘沿确实越过桌边，盘重心仍在支撑域内。",
+   "抓取时下指从桌边外侧进入，不能穿过桌面。",
+   "餐盘最终完整落回桌面，杯子无碰撞。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_89_nozzle_sponge_alignment",
+  "title": "喷雾瓶喷嘴沿海绵三个位置对准",
+  "status": "not_started",
+  "goal": "喷雾瓶喷嘴沿海绵三个位置对准",
+  "criteria": [
+   "喷嘴轴线依次与三个表面目标相交，横向误差小于 8 mm。",
+   "喷嘴距表面 8–12 cm，不能撞击海绵。",
+   "瓶子放正；不要求扳机动作或喷出液体。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_90_toothpaste_cap_stand",
+  "title": "把牙膏管倒立在盖端",
+  "status": "not_started",
+  "goal": "把牙膏管倒立在盖端",
+  "criteria": [
+   "由盖端实际支撑，管身不接触其他物体。",
+   "主轴相对竖直误差小于 8°，稳定 3 s。",
+   "无挤压变形或牙膏挤出声明。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_91_loaded_skillet_support",
+  "title": "托住锅柄与锅底搬运带载煎锅",
+  "status": "not_started",
+  "goal": "托住锅柄与锅底搬运带载煎锅",
+  "criteria": [
+   "锅平移至少 20 cm，柠檬始终留在锅内。",
+   "运输阶段同时存在柄部抓握和锅底支撑。",
+   "锅最终落稳，柠檬相对位移不超过锅内半径一半。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_92_spoon_under_bridge",
+  "title": "用勺子从书本桥下取出球",
+  "status": "not_started",
+  "goal": "用勺子从书本桥下取出球",
+  "criteria": [
+   "球从桥下移出至少 12 cm，主要接触来自勺子。",
+   "书和罐头位移均小于 1 cm，不能先拆桥。",
+   "球有一次离桌至少 2 cm 的勺托阶段。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_93_book_domino_chain",
+  "title": "排好包装盒后触发顺序倒下",
+  "status": "not_started",
+  "goal": "排好包装盒后触发顺序倒下",
+  "criteria": [
+   "后两只开始倾倒的时刻严格晚于前一只，且由物体接触触发。",
+   "手只触碰第一只；不能直接推倒其他盒。",
+   "三只都最终侧躺在桌面，无掉桌。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_94_bookend_upright",
+  "title": "用两只罐头支住竖放的书",
+  "status": "not_started",
+  "goal": "用两只罐头支住竖放的书",
+  "criteria": [
+   "书本主平面与桌面夹角 85°–95°。",
+   "两罐分别在书两侧提供真实支撑，不能使用固定关节。",
+   "所有手撤离后书保持 3 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_95_can_roll_rails",
+  "title": "让横放罐头沿两本书之间滚动",
+  "status": "not_started",
+  "goal": "让横放罐头沿两本书之间滚动",
+  "criteria": [
+   "罐头前进至少 15 cm，并绕自身轴转动至少 90°。",
+   "罐体未越过书本上方，不能提起代替滚动。",
+   "书本位移小于 1 cm，罐头最终静止 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_96_marker_two_handles",
+  "title": "让毛笔同时穿过两个杯把",
+  "status": "not_started",
+  "goal": "让毛笔同时穿过两个杯把",
+  "criteria": [
+   "同一支笔连续穿过两个真实孔道。",
+   "两杯均直立，笔最终仅由杯把支撑并保持 2 s。",
+   "不能将杯体互相穿插来缩短孔距。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_97_tray_bottle_gate",
+  "title": "把托盘侧转后送过两只高瓶",
+  "status": "not_started",
+  "goal": "把托盘侧转后送过两只高瓶",
+  "criteria": [
+   "托盘完整从两瓶之间经过，底面高度小于瓶高的一半。",
+   "托盘与瓶子最小间隙至少 5 mm，瓶位移小于 1 cm。",
+   "最终托盘长轴朝前后，释放后稳定 2 s。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_98_fork_sponge_detour",
+  "title": "用叉柄推海绵绕开瓶子",
+  "status": "not_started",
+  "goal": "用叉柄推海绵绕开瓶子",
+  "criteria": [
+   "海绵从 x<-0.15 m 移到 x>0.15 m，路线绕过瓶身。",
+   "手不直接抓海绵，工具不能扎入海绵。",
+   "瓶子位移小于 1 cm，始终直立。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "proposal_99_handbell_oscillation",
+  "title": "握住手摇铃完成三次往复摆动",
+  "status": "not_started",
+  "goal": "握住手摇铃完成三次往复摆动",
+  "criteria": [
+   "铃体绕指定横轴完成三次往复，每侧幅度 20°–35°。",
+   "握持只在铃柄，铃体无撞桌或脱手，转向时角速度连续。",
+   "铃底落在杯垫内且稳定 2 s，不要求声音或内部铃舌运动。"
+  ],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "rotate_knob",
+  "title": "旋转旋钮",
+  "status": "accepted",
+  "goal": "Grasp the knob with five fingers, turn it counterclockwise by 35 degrees, then release and withdraw while it returns naturally.",
+  "criteria": [
+   "五指分担抓持与旋转接触，按指定方向转动，释放后自然回弹并稳定，检查手指姿态与运动"
+  ],
+  "oracle": "revobench.tasks.rotate_knob.metrics:evaluate_natural",
+  "gate": true,
+  "range": [
+   -0.01,
+   0.01
+  ],
+  "seed": 1,
+  "group": [
+   "knob_board",
+   "knob"
+  ],
+  "offsetMm": [
+   0.236,
+   9.009
+  ]
+ },
+ {
+  "id": "rotate_tube_cap",
+  "title": "双手旋转离心管盖",
+  "status": "not_started",
+  "goal": "旋转到目标角度并复位",
+  "criteria": [],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "set_table",
+  "title": "杯具摆放",
+  "status": "accepted",
+  "goal": "两种杯具竖直、分开放稳",
+  "criteria": [],
+  "oracle": "revobench.tasks.set_table.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "slide_utility_knife",
+  "title": "推出与收回刀片",
+  "status": "not_started",
+  "goal": "刀片伸出后收回；不做切割",
+  "criteria": [],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "solve_hanoi",
+  "title": "三层汉诺塔",
+  "status": "not_started",
+  "goal": "Move all three blocks from the left post to the right, never placing a larger block on a smaller one.",
+  "criteria": [],
+  "oracle": null,
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "stack_blocks",
+  "title": "叠放方块和圆柱",
+  "status": "accepted",
+  "goal": "形成稳定三层结构，松手后保持",
+  "criteria": [],
+  "oracle": "revobench.tasks.stack_blocks.metrics:evaluate",
+  "gate": false,
+  "range": null,
+  "seed": null
+ },
+ {
+  "id": "tray_carry",
+  "title": "双手端托盘",
+  "status": "accepted",
+  "goal": "Lift the tray with both hands, place it down and release.",
+  "criteria": [
+   "双手托起托盘、保持水平和接触、限制食物滑移，再放下并松手"
+  ],
+  "oracle": "revobench.tasks.tray_carry.metrics:evaluate",
+  "gate": true,
+  "range": [
+   -0.01,
+   0.01
+  ],
+  "seed": 1,
+  "group": [
+   "tray_food_pair_tray",
+   "tray_food_pair_beef_stew"
+  ],
+  "offsetMm": [
+   0.236,
+   9.009
+  ]
+ }
+]
