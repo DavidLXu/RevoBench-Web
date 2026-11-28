@@ -173,7 +173,7 @@ function openTask(id) {
     <div><span>规划跨度</span><strong>${esc(dimLabels.horizon[t.horizon] || t.horizon)}</strong><code>${esc(t.horizon)}</code></div>
   </div>`;
 
-  $('#detail-body').innerHTML = `${v ? `<div class="detail-video"><video id="task-video" controls playsinline preload="metadata" poster="${esc(v.poster)}" aria-label="${esc(t.title)}视频"><source src="${esc(v.url)}" type="video/mp4"></video></div><p class="video-error" id="video-error" hidden>视频暂时无法播放，请稍后重试。</p>` : sceneDetail}<div class="detail-copy"><div class="detail-badges"><span class="status ${t.status}">${labels[t.status]}</span>${suiteBadges}</div><h2 id="detail-title">${esc(t.title)}</h2><p>${esc(t.description)}</p>${taxonomyGrid}${t.videos.length > 1 ? `<div class="video-options" role="group" aria-label="选择视频">${t.videos.map((clip, i) => `<button data-clip="${i}" aria-pressed="${i === 0}">${esc(clip.label)}</button>`).join('')}</div>` : ''}<div class="detail-meta"><span>评测赛道：ID / Visual-OOD / Physics-OOD</span><span>${t.trajectory_count} 条已登记验收参考</span>${v ? `<span id="clip-meta">${kindLabels[v.kind]} · ${duration(v.duration_s)}</span>` : scene ? '<span>RevoTron · 静态初态</span>' : ''}</div>${t.task_spec_url ? `<a class="task-spec-link" href="${esc(t.task_spec_url)}">资产、步骤与验收标准 ↗</a>` : ''}<p class="detail-notice" id="clip-notice">${scene && !v ? '真实模型的静态场景渲染，展示机器人与道具的初始摆放。尚无动作轨迹，不代表动态接触或任务验收通过。' : clipNotice(v)}</p><span class="task-id">${esc(t.id)}</span></div>`;
+  $('#detail-body').innerHTML = `${v ? `<div class="detail-video"><video id="task-video" controls playsinline preload="metadata" poster="${esc(v.poster)}" aria-label="${esc(t.title)}视频"><source src="${esc(v.url)}" type="video/mp4"></video></div><p class="video-error" id="video-error" hidden>视频暂时无法播放，请稍后重试。</p>` : sceneDetail}<div class="detail-copy"><div class="detail-badges"><span class="status ${t.status}">${labels[t.status]}</span>${suiteBadges}</div><h2 id="detail-title">${esc(t.title)}</h2><p>${esc(t.description)}</p>${taxonomyGrid}${t.videos.length > 1 ? `<div class="video-options" role="group" aria-label="选择视频">${t.videos.map((clip, i) => `<button data-clip="${i}" aria-pressed="${i === 0}">${esc(clip.label)}</button>`).join('')}</div>` : ''}<div class="detail-meta"><span>评测赛道：ID / Visual-OOD / Physics-OOD</span><span>${t.trajectory_count} 条已登记验收参考</span>${v ? `<span id="clip-meta">${kindLabels[v.kind]} · ${duration(v.duration_s)}</span>` : scene ? '<span>RevoTron · 静态初态</span>' : ''}</div>${t.task_spec_url ? `<a class="task-spec-link" href="${esc(t.task_spec_url)}">资产、步骤与验收标准 ↗</a>` : ''}<p class="detail-notice" id="clip-notice">${scene && !v ? '真实模型的静态场景渲染，展示机器人与道具的初始摆放。尚无动作轨迹，不代表动态接触或任务验收通过。' : esc(clipNotice(v))}</p><span class="task-id">${esc(t.id)}</span></div>`;
   if (!$('#detail').open) $('#detail').showModal();
   if (v) {
     const video = $('#task-video');
@@ -194,6 +194,7 @@ function openTask(id) {
 
 function clipNotice(v) {
   if (!v) return '该任务尚未开始，暂时没有动作录像。';
+  if (v.notice) return v.notice;
   if (v.kind === 'demo') return '任务演示 · 1.5 倍速。';
   const sample = v.sampling === 'original_video' ? '原始仿真录像。' : '由稀疏真实采样帧按原生时间戳保持生成，并非逐帧连续录制。';
   return '1.5 倍速。' + sample + (v.kind === 'accepted' ? '物理与数据已验收；仿人动作质量仍需单独复核。' : '开发过程记录，不代表最终验收效果。');

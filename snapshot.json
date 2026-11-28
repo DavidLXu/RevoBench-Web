@@ -451,6 +451,17 @@
       "trajectory_count": 1,
       "videos": [
         {
+          "url": "./media/carton-goal.mp4",
+          "poster": "./media/carton-goal.jpg",
+          "run_id": "reference01",
+          "kind": "demo",
+          "label": "落点对照 · 原速",
+          "duration_s": 17.1,
+          "sampling": "overview_with_pose_replay",
+          "playback_speed": 1,
+          "notice": "原速。左侧为原始录像，右侧按同次记录的纸箱位姿重绘目标垫；最终中心偏差 7.5 毫米，位置验收容差 25 毫米。"
+        },
+        {
           "url": "./media/lift_carton--demo--1p5x.mp4",
           "poster": "./media/lift_carton--demo--1p5x.jpg",
           "run_id": null,
